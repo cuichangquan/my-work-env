@@ -30,8 +30,8 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 # alias ff="vifm -c ':only'"
 alias ff="vifm"
-alias ffrc="vim ~/sai/my-work-helper/vifmrc"
-alias vifmrc="vim ~/sai/my-work-helper/vifmrc"
+alias ffrc="vim ~/sai/my-work-env/vifmrc"
+alias vifmrc="vim ~/sai/my-work-env/vifmrc"
 alias ffrcc="vim ~/sai/work-config/work-vifmrc"
 
 # set default editor
@@ -57,8 +57,8 @@ alias la="ll -a"
 # alias sss="source ~/.bashrc"
 # alias ssss="source ~/.bash_profile"
 
-alias my="cd ~/sai/my-work-helper/;ls"
-alias vimrc="vim ~/sai/my-work-helper/neovim/vimrc"
+alias my="cd ~/sai/my-work-env/;ls"
+alias vimrc="vim ~/sai/my-work-env/neovim/vimrc"
 alias init.vim="my;vim ."
 alias cui="cd ~/sai/local-plugins/denite-create-test/rplugin/python3/denite/source/"
 alias cui-p="cd ~/sai/local-plugins/denite-create-test/"

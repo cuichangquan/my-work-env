@@ -128,8 +128,8 @@ map <Nop>(<Plug>AM_w=) <Plug>AM_w=
 
 " vim-cheatsheet
 "---------------------------------------------------
-let g:cheatsheet#cheat_file = '~/sai/my-work-helper/cheatsheet.md'
-command! CheatEdit :edit ~/sai/my-work-helper/cheatsheet.md
+let g:cheatsheet#cheat_file = '~/sai/my-work-env/cheatsheet.md'
+command! CheatEdit :edit ~/sai/my-work-env/cheatsheet.md
 
 " Define mappings
 autocmd FileType denite call s:denite_my_settings()
@@ -178,5 +178,5 @@ call denite#custom#source('file/old', 'matchers', ['matcher_cpsm', 'matcher/proj
 call denite#custom#source('file/rec', 'matchers', ['matcher_cpsm', 'matcher/project_files'])
 
 call denite#custom#source('rails_log', 'max_candidates', 3000)
-source ~/sai/my-work-helper/neovim/common-config.vim
+source ~/sai/my-work-env/neovim/common-config.vim
 
