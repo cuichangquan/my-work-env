@@ -75,8 +75,12 @@ alias bb="vim ~/.private_alias"
 source ~/.zsh/git-prompt.sh
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
-autoload -U compinit
-compinit -u
+
+# 補完機能を有効にする
+autoload -Uz compinit && compinit
+
+# 小文字でも大文字ディレクトリ、ファイルを補完できるようにする
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # lsコマンドがすごく重くなるので、一応コメントアウトした。
 # PROMPT_COMMAND="__git_ps1 '\h:\W \u' '\\\$ '; $PROMPT_COMMAND"
