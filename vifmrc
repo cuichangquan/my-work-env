@@ -69,20 +69,24 @@ command! Ag !file=$(ag --color %a  %d | fzf --ansi | awk '{print $1}' | awk -F'[
 
 " -x は実行可能かという判断
 command! ag !file=$(ag --color %a  %s | fzf --ansi | awk '{print $1}' | awk -F'[:]' '{print $2,$1}');
+            \ number=$(echo $number_with_file | cut -d ' ' -f 1);
+            \ file=$(echo $number_with_file | cut -d ' ' -f 2);
              \ if [ -n "$file" ]; then
              \   if [ -x /tmp/nvimsocket ]; then
-             \     nvr -s +$file;
+             \     nvr -s +$number $file;
              \   else
-             \     NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim +$file;
+             \     NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim +$number $file;
              \   fi;
              \ fi
 
-command! gr !file=$(ag --color %a  %s | fzf --ansi | awk '{print $1}' | awk -F'[:]' '{print $2,$1}');
+command! gr !number_with_file=$(ag --color %a  %s | fzf --ansi | awk '{print $1}' | awk -F'[:]' '{print $2,$1}');
+            \ number=$(echo $number_with_file | cut -d ' ' -f 1);
+            \ file=$(echo $number_with_file | cut -d ' ' -f 2);
              \ if [ -n "$file" ]; then
              \   if [ -x /tmp/nvimsocket ]; then
-             \     nvr -s +$file;
+             \     nvr -s +$number $file;
              \   else
-             \     NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim +$file;
+             \     NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim +$number $file;
              \   fi;
              \ fi
 
