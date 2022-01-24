@@ -74,7 +74,7 @@ command! ag !file=$(ag --color %a  %s | fzf --ansi | awk '{print $1}' | awk -F'[
              \     nvr -s +$file;
              \   else
              \     NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim +$file;
-             \   fi
+             \   fi;
              \ fi
 
 command! gr !file=$(ag --color %a  %s | fzf --ansi | awk '{print $1}' | awk -F'[:]' '{print $2,$1}');
@@ -83,7 +83,7 @@ command! gr !file=$(ag --color %a  %s | fzf --ansi | awk '{print $1}' | awk -F'[
              \     nvr -s +$file;
              \   else
              \     NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim +$file;
-             \   fi
+             \   fi;
              \ fi
 
 " Example
