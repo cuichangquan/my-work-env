@@ -38,3 +38,6 @@ unset __conda_setup
 # condaの仮装環境のコントロール
 # conda activate
 # conda deactivate
+
+# Node.js install
+export PATH=$HOME/.nodebrew/current/bin:$PATH

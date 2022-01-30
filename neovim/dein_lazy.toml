@@ -276,16 +276,6 @@ on_cmd = ['SQLUFormatter']
 repo = 'leafgarland/typescript-vim'
 on_ft = 'typescript'
 
-# Gbrowse to open Github URL
-[[plugins]]
-repo = 'tpope/vim-rhubarb'
-on_cmd = ['Gbrowse']
-
-# Gbrowse to open Bitbucket URL
-[[plugins]]
-repo = 'tommcdo/vim-fubitive'
-on_cmd = ['Gbrowse']
-
 [[plugins]]
 repo = 'thinca/vim-quickrun'
 on_i = 1
