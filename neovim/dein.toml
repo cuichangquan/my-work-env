@@ -31,6 +31,9 @@ repo = 'tommcdo/vim-fubitive'
 on_cmd = ['Gbrowse']
 
 [[plugins]]
+repo = 'skanehira/gh.vim'
+
+[[plugins]]
 repo = 'haya14busa/dein-command.vim'
 
 [[plugins]]
@@ -129,6 +132,9 @@ repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
 repo = 'airblade/vim-rooter'
+hook_add = '''
+  let g:rooter_patterns = ['.git', 'Makefile', '*.sln', 'build/env.sh']
+'''
 
 # from: https://github.com/Shougo/dein.vim/issues/74
 [[plugins]]
@@ -254,9 +260,6 @@ hook_add = '''
 " https://github.com/vifm/vifm.vim/blob/master/doc/plugin/vifm-plugin.txt
 " nnoremap <Leader>h :Vifm<CR>
 '''
-
-[[plugins]]
-repo = 'mcchrish/nnn.vim'
 
 [[plugins]]
 repo = 'xolox/vim-session'

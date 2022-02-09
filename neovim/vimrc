@@ -84,7 +84,11 @@ filetype plugin indent on    " required
 "---------------------------------------------------
 
 " pluginによる設定
-"
+
+
+" Plugin 'airblade/vim-rooter'
+let g:rooter_patterns = ['.git', 'Makefile', '*.sln', 'build/env.sh']
+
 " Plugin 'terryma/vim-expand-region'
 "---------------------------------------------------
 vmap v <Plug>(expand_region_expand)

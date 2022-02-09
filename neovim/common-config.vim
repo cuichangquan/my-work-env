@@ -2,6 +2,10 @@ colorscheme elflord
 " https://yukidarake.hateblo.jp/entry/2015/07/10/201356
 set timeout timeoutlen=500 ttimeoutlen=50
 
+" https://qiita.com/izumin5210/items/7e0ad2f86d0686d8b376
+" rubyの時、vimが重い
+set foldmethod=manual
+
 syntax on
 filetype on            " ファイル形式の検出を有効化
 filetype indent on    " Enable filetype-specific indenting
