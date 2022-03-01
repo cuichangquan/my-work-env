@@ -40,4 +40,5 @@ unset __conda_setup
 # conda deactivate
 
 # Node.js install
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
