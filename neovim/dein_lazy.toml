@@ -247,6 +247,7 @@ on_ft = 'csv'
 repo = 'tpope/vim-endwise'
 on_ft = 'ruby'
 
+# https://qiita.com/coil_msp123/items/29de76b035dd28af77a9#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 rev = 'release'
