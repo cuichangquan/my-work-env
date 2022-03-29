@@ -50,6 +50,9 @@ Plugin 'Shougo/neomru.vim'
 Plugin 'Shougo/neoyank.vim'
 Plugin 'airblade/vim-rooter'
 
+" -- other --
+Plugin 'chrisbra/csv.vim'
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo

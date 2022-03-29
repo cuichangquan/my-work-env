@@ -279,3 +279,11 @@ on_ft = 'typescript'
 [[plugins]]
 repo = 'thinca/vim-quickrun'
 on_i = 1
+
+[[plugins]]
+repo = 'chrisbra/csv.vim'
+on_ft = 'csv'
+
+[[plugins]]
+repo = 'tpope/vim-endwise'
+on_ft = 'ruby'
