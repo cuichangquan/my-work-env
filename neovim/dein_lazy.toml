@@ -246,3 +246,42 @@ on_ft = 'csv'
 [[plugins]]
 repo = 'tpope/vim-endwise'
 on_ft = 'ruby'
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+on_i = 1
+merged = '0'
+hook_source = 'call coil398#init#coc#hook_source()'
+hook_add = '''
+  " これを実行する必要がある
+  " :CocInstall coc-solargraph
+  "
+  let g:session_autosave = 'no'
+
+  " from: https://zenn.dev/skanehira/articles/2021-12-12-vim-coc-nvim-jump-split
+  "
+  " [
+  "   {"text": "(e)dit", "value": "edit"}
+  "   {"text": "(n)ew", "value": "new"}
+  " ]
+  " NOTE: text must contains '()' to detect input and its must be 1 character
+
+  function! ChoseAction(actions) abort
+    echo join(map(copy(a:actions), { _, v -> v.text }), ", ") .. ": "
+    let result = getcharstr()
+    let result = filter(a:actions, { _, v -> v.text =~# printf(".*\(%s\).*", result)})
+    return len(result) ? result[0].value : ""
+  endfunction
+
+  function! CocJumpAction() abort
+    let actions = [
+          \ {"text": "(s)plit", "value": "split"},
+          \ {"text": "(v)slit", "value": "vsplit"},
+          \ {"text": "(t)ab", "value": "tabedit"},
+          \ ]
+    return ChoseAction(actions)
+  endfunction
+
+  nnoremap <silent> <C-]> :<C-u>call CocActionAsync('jumpDefinition', CocJumpAction())<CR>
+'''
