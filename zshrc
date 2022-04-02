@@ -1,3 +1,4 @@
+# ~/.zprofile
 # ~/.zshrc
 
 # About work
