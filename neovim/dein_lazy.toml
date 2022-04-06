@@ -101,6 +101,7 @@ on_ft = ['ruby','eruby']
 [[plugins]]
 # repo = 'tpope/vim-rails'
 repo = 'cuichangquan/vim-rails'
+rev = 'release'
 hook_add = '''
   let g:rails_app_root = substitute(system('git rev-parse --show-toplevel'), '\n', '', 'g')
   let g:routes_cache_file = g:rails_app_root . '/_routes.txt'
