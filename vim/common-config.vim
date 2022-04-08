@@ -255,8 +255,8 @@ endfunction
 command! -range=% GremoveConflictMarkers <line1>,<line2>call RemoveConflictMarkers()
 
 if has('nvim')
-  source ~/sai/my-work-env/neovim/jira_prject.vim
-  source ~/sai/my-work-env/neovim/ccq.vim
+  source ~/sai/my-work-env/vim/jira_prject.vim
+  source ~/sai/my-work-env/vim/ccq.vim
   source ~/sai/work-config/work-config.vim
 else
   " vimだけの機能(neovimではなく)

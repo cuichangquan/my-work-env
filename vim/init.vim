@@ -43,7 +43,7 @@ if dein#check_install()
   call dein#install()
 endif
 
-source ~/sai/my-work-env/neovim/common-config.vim
+source ~/sai/my-work-env/vim/common-config.vim
 
 " https://github.com/mhinz/neovim-remote
 " このように設定することで、lazygitがneovimで「e」キーで対象ファイルを開けた。
