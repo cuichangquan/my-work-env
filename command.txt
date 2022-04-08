@@ -2,8 +2,11 @@ ln -fs ~/sai/my-work-env/shell/zshrc           ~/.zshrc
 ln -fs ~/sai/my-work-env/shell/public_alias    ~/.public_alias
 ln -fs ~/sai/work-config/private_alias         ~/.private_alias
 
-ln -fs ~/sai/my-work-env/vifmrc          ~/.vifm/vifmrc
-ln -fs ~/sai/my-work-env/pryrc           ~/.pryrc
+ln -fs ~/sai/my-work-env/vim/vimrc              ~/.vimrc
+ln -fs ~/sai/my-work-env/vim/init.vim           ~/.config/nvim/init.vim
+ln -fs ~/sai/my-work-env/vim/dein.toml          ~/.config/nvim/dein.toml
+ln -fs ~/sai/my-work-env/vim/dein_lazy.toml     ~/.config/nvim/dein_lazy.toml
+ln -fs ~/sai/my-work-env/vim/ginit.vim          ~/.config/nvim/
 
 ln -fs ~/sai/my-work-env/tmux/tmux.conf       ~/.tmux.conf
 ln -fs ~/sai/my-work-env/tmux/tmux.conf.osx   ~/.tmux.conf.osx
@@ -15,16 +18,12 @@ ln -fs ~/sai/my-work-env/git/git-completion.bash ~/.zsh/git-completion.bash
 ln -fs ~/sai/my-work-env/git/git-completion.zsh  ~/.zsh/_git
 ln -fs ~/sai/my-work-env/git/tigrc               ~/.tigrc
 
-ln -fs ~/sai/my-work-env/ctags       ~/.ctags
-ln -fs ~/sai/my-work-env/inputrc     ~/.inputrc
+ln -fs ~/sai/my-work-env/others/pryrc       ~/.pryrc
+ln -fs ~/sai/my-work-env/others/agignore    ~/.agignore
+ln -fs ~/sai/my-work-env/others/vifmrc      ~/.vifm/vifmrc
+ln -fs ~/sai/my-work-env/others/ctags       ~/.ctags
+ln -fs ~/sai/my-work-env/others/inputrc     ~/.inputrc
 
-ln -fs ~/sai/my-work-env/vim/vimrc              ~/.vimrc
-ln -fs ~/sai/my-work-env/vim/init.vim           ~/.config/nvim/init.vim
-ln -fs ~/sai/my-work-env/vim/dein.toml          ~/.config/nvim/dein.toml
-ln -fs ~/sai/my-work-env/vim/dein_lazy.toml     ~/.config/nvim/dein_lazy.toml
-ln -fs ~/sai/my-work-env/vim/ginit.vim          ~/.config/nvim/
-
-ln -fs ~/sai/my-work-env/agignore                  ~/.agignore
 ln -fs ~/sai/my-work-env/peco/config.json          ~/.config/peco/config.json
 
 # ln -s ~/sai/my-work-env/us_keyboard/karabiner/equal_sign_to_plus_sign.json ~/.config/karabiner/assets/complex_modifications/equal_sign_to_plus_sign.json
