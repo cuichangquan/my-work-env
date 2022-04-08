@@ -1,14 +1,15 @@
 ln -fs ~/sai/my-work-env/zshrc           ~/.zshrc
-ln -fs ~/sai/my-work-env/gitconfig       ~/.gitconfig
-ln -fs ~/sai/my-work-env/gitignore       ~/.gitignore
 ln -fs ~/sai/my-work-env/pryrc           ~/.pryrc
 ln -fs ~/sai/my-work-env/public_alias    ~/.public_alias
-ln -fs ~/sai/my-work-env/tmux.conf       ~/.tmux.conf
 ln -fs ~/sai/work-config/private_alias   ~/.private_alias
 ln -fs ~/sai/my-work-env/tigrc           ~/.tigrc
 ln -fs ~/sai/my-work-env/vifmrc          ~/.vifm/vifmrc
+ln -fs ~/sai/my-work-env/tmux.conf       ~/.tmux.conf
+ln -fs ~/sai/my-work-env/tmux.conf.osx   ~/.tmux.conf.osx
 
-ln -fs ~/sai/my-work-env/tmux.conf.osx           ~/.tmux.conf.osx
+
+ln -fs ~/sai/my-work-env/git/gitconfig           ~/.gitconfig
+ln -fs ~/sai/my-work-env/git/gitignore           ~/.gitignore
 ln -fs ~/sai/my-work-env/git/git-prompt.sh       ~/.zsh/git-prompt.sh
 ln -fs ~/sai/my-work-env/git/git-completion.bash ~/.zsh/git-completion.bash
 ln -fs ~/sai/my-work-env/git/git-completion.zsh  ~/.zsh/_git
