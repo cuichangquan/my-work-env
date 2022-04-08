@@ -60,8 +60,8 @@ alias la="ll -a"
 alias my="cd ~/sai/my-work-env/;ls"
 alias vimrc="vim ~/sai/my-work-env/neovim/vimrc"
 alias init.vim="my;vim ."
-alias cui="cd ~/sai/local-plugins/denite-create-test/rplugin/python3/denite/source/"
-alias cui-p="cd ~/sai/local-plugins/denite-create-test/"
+alias cui="cd ~/sai/local-plugins/denite_sources/rplugin/python3/denite/source/"
+alias cui-p="cd ~/sai/local-plugins/denite_sources/"
 alias g='lazygit'
 alias ccq='cd ~/sai/ccq-rails-vuejs-app'
 

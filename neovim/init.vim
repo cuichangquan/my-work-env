@@ -34,7 +34,7 @@ if dein#load_state('~/.cache/dein')
   call dein#begin('~/.cache/dein')
   call dein#load_toml('~/.config/nvim/dein.toml',      {'lazy': 0})
   call dein#load_toml('~/.config/nvim/dein_lazy.toml', {'lazy': 1})
-  call dein#local('~/sai/local-plugins', { 'frozen' : 1 }, ['denite-create-test'])
+  call dein#local('~/sai/local-plugins', { 'frozen' : 1 }, ['denite_sources'])
   call dein#end()
   call dein#save_state()
 endif
