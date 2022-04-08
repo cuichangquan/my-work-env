@@ -289,29 +289,6 @@ hook_add = '''
 [[plugins]]
 repo = 'xolox/vim-misc'
 
-#------lsp------
-[[plugins]]
-repo = 'prabirshrestha/async.vim'
-
-[[plugins]]
-repo = 'prabirshrestha/asyncomplete.vim'
-
-[[plugins]]
-repo = 'prabirshrestha/asyncomplete-lsp.vim'
-
-[[plugins]]
-repo = 'prabirshrestha/vim-lsp'
-hook_add = '''
-let g:lsp_virtual_text_enabled = 0
-let g:lsp_diagnostics_enabled = 0         " disable diagnostics support
-'''
-
-[[plugins]]
-repo = 'mattn/vim-lsp-settings'
-
-[[plugins]]
-repo = 'FuDesign2008/vim-lsp-vue'
-
 # 直接インストールした
 # git clone https://github.com/github/copilot.vim.git   ~/.config/nvim/pack/github/start/copilot.vim
 #[[plugins]]
