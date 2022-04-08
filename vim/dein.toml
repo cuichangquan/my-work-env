@@ -190,13 +190,6 @@ hook_add = '''
 # '''
 # on_path = '.*'
 
-# deoplete は neovim の補完プラグインなのですが， 設定をせずに
-# neosnippet のスニペット機能を同時に利用しようとしてもうまくいきません．
-### https://leico.github.io/TechnicalNote/VimR/VimR-deoplete
-### https://qiita.com/takezo/items/809d53ecd37c438bac9e
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
-
 [[plugins]]
 repo = 'mattn/webapi-vim'
 

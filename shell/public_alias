@@ -57,7 +57,7 @@ alias la="ll -a"
 # alias sss="source ~/.bashrc"
 # alias ssss="source ~/.bash_profile"
 
-alias my="cd ~/sai/my-work-env/;ls"
+alias my="cd ~/sai/my-work-env/vim/;ls"
 alias vimrc="vim ~/sai/my-work-env/neovim/vimrc"
 alias init.vim="my;vim ."
 alias cui="cd ~/sai/local-plugins/denite_sources/rplugin/python3/denite/source/"

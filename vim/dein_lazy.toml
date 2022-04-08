@@ -6,7 +6,6 @@ hook_add = '''
   " <Space>w=の使い方もわからないので、一旦無効にした
   map <Nop>(<Plug>AM_w=) <Plug>AM_w=
 '''
-
 on_i = 1
 
 [[plugins]]
@@ -43,20 +42,6 @@ hook_add = '''
 on_map = ['<Plug>(quickhl-manual-this)']
 
 [[plugins]]
-repo = 'Shougo/neosnippet.vim'
-hook_add = '''
-  imap <C-k>  <Plug>(neosnippet_expand_or_jump)
-  smap <C-k>  <Plug>(neosnippet_expand_or_jump)
-  xmap <C-k>  <Plug>(neosnippet_expand_target)
-
-  let g:neosnippet#enable_snipmate_compatibility = 1
-  let g:neosnippet#snippets_directory='~/sai/my-work-env/neovim/my_snippet'
-'''
-depends = ['neosnippet-snippets']
-on_ft = ['snippet']
-on_event = 'InsertCharPre'
-
-[[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_source = '''
   let g:deoplete#enable_at_startup = 1
@@ -68,9 +53,6 @@ hook_source = '''
 "  let g:deoplete#enable_smart_case = 1
 "  let g:deoplete#file#enable_buffer_path = 1
 "  let g:deoplete#max_list = 10000
-  inoremap <expr><tab> pumvisible() ? "\<C-n>" :
-        \ neosnippet#expandable_or_jumpable() ?
-        \    "\<Plug>(neosnippet_expand_or_jump)" : "\<tab>"
 '''
 on_path = '.*'
 
