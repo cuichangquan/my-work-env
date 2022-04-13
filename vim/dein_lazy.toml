@@ -8,28 +8,6 @@ hook_add = '''
 '''
 on_i = 1
 
-[[plugins]]
-repo = 'mbbill/undotree'
-hook_add = '''
-  nnoremap <F5> :UndotreeToggle<cr>
-  if has("persistent_undo")
-      set undodir=~/.undodir
-      set undofile
-  endif
-'''
-on_i = 1
-
-[[plugins]]
-repo = 'airblade/vim-gitgutter'
-hook_add = '''
-  " from: https://wonderwall.hatenablog.com/entry/2016/03/26/211710
-  let g:gitgutter_highlight_lines = 0
-
-  nmap ]h <Plug>GitGutterNextHunk
-  nmap [h <Plug>GitGutterPrevHunk
-'''
-on_i = 1
-
 # 複数ワードハイライト
 [[plugins]]
 repo = 't9md/vim-quickhl'
@@ -110,14 +88,6 @@ hook_add = '''
 '''
 on_i = 1
 
-# [[plugins]]
-# repo = "ujihisa/neco-look"
-# on_i = 1
-
-[[plugins]]
-repo = "davidhalter/jedi-vim"
-on_ft = ['python']
-
 [[plugins]]
 repo = 'terryma/vim-expand-region'
 hook_add = '''
@@ -135,18 +105,6 @@ on_path = '.*'
 repo = 'tpope/vim-surround'
 on_i = 1
 
-# 各filetypeのsyntaxファイルの中にある記述を見て 補完候補を追加してくれます。
-[[plugins]]
-repo = 'Shougo/neco-syntax'
-
-[[plugins]]
-repo = 'reireias/vim-cheatsheet'
-hook_add = '''
-  let g:cheatsheet#cheat_file = '~/sai/my-work-env/cheatsheet.md'
-  command! CheatEdit :edit ~/sai/my-work-env/cheatsheet.md
-'''
-on_cmd = [ 'Cheat' ]
-
 [[plugins]]
 repo = 'simeji/winresizer'
 hook_add = '''
@@ -154,14 +112,6 @@ hook_add = '''
   let g:winresizer_start_key = '<C-T>'
 '''
 on_path = '.*'
-
-[[plugins]]
-repo = 'posva/vim-vue'
-on_ft = 'vue'
-
-[[plugins]]
-repo = 'thinca/vim-prettyprint'
-on_cmd = [ 'PP', 'PP!' ]
 
 [[plugins]]
 repo = 'nanonanomachine/vim-redash'
@@ -177,26 +127,8 @@ repo = 'vim-jp/vimdoc-ja'
 on_cmd = ['help', 'h']
 
 [[plugins]]
-repo = 'vim-jp/vital.vim'
-hook_add = '''
-  " 必要なときにロードしておこう。
-'''
-
-[[plugins]]
-repo = 'vim-scripts/SQLUtilities'
-on_cmd = ['SQLUFormatter']
-
-[[plugins]]
-repo = 'leafgarland/typescript-vim'
-on_ft = 'typescript'
-
-[[plugins]]
 repo = 'thinca/vim-quickrun'
 on_i = 1
-
-[[plugins]]
-repo = 'chrisbra/csv.vim'
-on_ft = 'csv'
 
 [[plugins]]
 repo = 'tpope/vim-endwise'
