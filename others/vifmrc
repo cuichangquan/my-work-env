@@ -8,24 +8,24 @@ set vicmd='NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim'
 
 set vifminfo=state,tui,bookmarks,bmarks
 
-nnoremap <esc> :quit<cr>
-nnoremap q :quit<cr>
-nnoremap Q :cquit<cr>
-nnoremap K :mkdir<space>
-nnoremap N :touch<space>
-nnoremap X :!open %f<cr>
-nnoremap ss :sort<cr>
-nnoremap S :shell<cr>
-nnoremap w :view<cr>
-vnoremap w :view<cr>gv
+nnoremap <esc> :quit<CR>
+nnoremap q :quit<CR>
+nnoremap Q :cquit<CR>
+nnoremap K :mkdir<SPACE>
+nnoremap N :touch<SPACE>
+nnoremap zo :sync %c<CR>
+nnoremap ss :sort<CR>
+nnoremap S :shell<CR>
+nnoremap w :view<CR>
+vnoremap w :view<CR>gv
 
-nnoremap sp :sp<cr>
-nnoremap vs :vs<cr>
-nnoremap st :tabnew<cr>
-nnoremap on :only<cr>
+nnoremap sp :sp<CR>
+nnoremap vs :vs<CR>
+nnoremap st :tabnew<CR>
+nnoremap on :only<CR>
 
 " original<c-l>: redraw screen
-nnoremap <C-l> :!vim %c<cr>
+nnoremap <C-l> :!vim %c<CR>
 " original: repeat :cmd
 nnoremap . za
 nnoremap r cw
@@ -35,22 +35,22 @@ nnoremap <C-k> 10<UP>
 nnoremap <C-j> 10<DOWN>
 
 " Toggle wrap setting on ,w key
-nnoremap <space>w :set lsview!<cr>
+nnoremap <SPACE>w :set lsview!<CR>
 
-nnoremap <space><space>s :sh<cr>
+nnoremap <SPACE><SPACE>s :sh<CR>
 
 " https://wiki.vifm.info/index.php/How_to_copy_path_to_current_file/directory_to_system_clipboard
 " yank current directory path into the clipboard
-nnoremap yd :!echo -n %d | pbcopy %i<cr>:echo expand('%"d') "is yanked to clipboard"<cr>
+nnoremap yd :!echo -n %d | pbcopy %i<CR>:echo expand('%"d') "is yanked to clipboard"<CR>
 
 " yank current file path into the clipboard
-nnoremap yf :!echo -n %c:p | pbcopy %i<cr>:echo expand('%"c:p') "is yanked to clipboard"<cr>
+nnoremap yf :!echo -n %c:p | pbcopy %i<CR>:echo expand('%"c:p') "is yanked to clipboard"<CR>
 
 " yank current filename without path into the clipboard
-nnoremap yn :!echo -n %c | pbcopy %i<cr>:echo expand('%"c') "is yanked to clipboard"<cr>
+nnoremap yn :!echo -n %c | pbcopy %i<CR>:echo expand('%"c') "is yanked to clipboard"<CR>
 
 " yank root of current file's name into the clipboard
-nnoremap yr :!echo -n %c:r | pbcopy %i<cr>:echo expand('%"c:r') "is yanked to clipboard"<cr>
+nnoremap yr :!echo -n %c:r | pbcopy %i<CR>:echo expand('%"c:r') "is yanked to clipboard"<CR>
 
 fileviewer *.rb,*.erb,*.md,*.yml,*.js,*.css,*.py,*.sh,*.json
            \ env -uCOLORTERM bat --color=always --wrap=never --pager=never %c -p
@@ -59,7 +59,7 @@ fileviewer *.rb,*.erb,*.md,*.yml,*.js,*.css,*.py,*.sh,*.json
 " https://wonderwall.hatenablog.com/entry/2019/03/06/224000
 " command! fd !file=$(fd --type file --color=always --hidden --follow --exclude .git %a  %d | fzf --ansi);
 "             \ if [ -n "$file" ]; then vim $file; fi
-" nnoremap <space>f :fd<space>
+" nnoremap <SPACE>f :fd<SPACE>
 
 " https://wiki.vifm.info/index.php/How_to_integrate_fzf_for_fuzzy_finding
 command! FZF :set noquickview | :execute 'goto' fnameescape(term('fd --type file --color=always --hidden --follow --exclude .git | fzf --ansi 2>/dev/tty'))
@@ -105,14 +105,14 @@ command! reload :write | restart
 command! OpenSession !NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim -c 'OpenSession'
 command! DeniteFileMru !NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim -c 'Denite file_mru'
 
-nnoremap <space>f :FZF<cr>
-nnoremap <c-g> :Ag<space>
-nnoremap ag :ag<space>
-nnoremap gr :gr<space>
-nnoremap <space>g :!lazygit<cr>
-nnoremap <space><space> :
-nnoremap <c-u><c-u> :DeniteFileMru<cr>
-nnoremap <space><space><space> :DeniteFileMru<cr>
+nnoremap <SPACE>f :FZF<CR>
+nnoremap <c-g> :Ag<SPACE>
+nnoremap ag :ag<SPACE>
+nnoremap gr :gr<SPACE>
+nnoremap <SPACE>g :!lazygit<CR>
+nnoremap <SPACE><SPACE> :
+nnoremap <c-u><c-u> :DeniteFileMru<CR>
+nnoremap <SPACE><SPACE><SPACE> :DeniteFileMru<CR>
 
 set timefmt=" %Y/%m/%d %H:%M:%S"
 set viewcolumns=-45%{name}..,-{ext},10{size},12{perms},21{mtime}

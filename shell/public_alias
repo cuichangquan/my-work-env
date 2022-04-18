@@ -31,7 +31,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # alias ff="vifm -c ':only'"
 alias ff="vifm"
 alias ffrc="vim ~/sai/my-work-env/vifmrc"
-alias vifmrc="vim ~/sai/my-work-env/vifmrc"
+alias vifmrc="vim ~/sai/my-work-env/others/vifmrc"
 alias ffrcc="vim ~/sai/work-config/work-vifmrc"
 
 # set default editor
