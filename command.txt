@@ -26,8 +26,9 @@ ln -fs ~/sai/my-work-env/others/inputrc     ~/.inputrc
 
 ln -fs ~/sai/my-work-env/peco/config.json          ~/.config/peco/config.json
 
-# ln -s ~/sai/my-work-env/us_keyboard/karabiner/equal_sign_to_plus_sign.json ~/.config/karabiner/assets/complex_modifications/equal_sign_to_plus_sign.json
-# ln -s ~/sai/my-work-env/us_keyboard/karabiner/quote_to_colon.json          ~/.config/karabiner/assets/complex_modifications/quote_to_colon.json
+# ln -s ~/sai/my-work-env/us_keyboard/karabiner/equal_sign_to_plus_sign.json     ~/.config/karabiner/assets/complex_modifications/equal_sign_to_plus_sign.json
+# ln -s ~/sai/my-work-env/us_keyboard/karabiner/quote_to_colon.json              ~/.config/karabiner/assets/complex_modifications/quote_to_colon.json
+ln -s ~/sai/my-work-env/us_keyboard/karabiner/ctrl_with_slash_to_up_arrow.json  ~/sai/my-work-env/us_keyboard/karabiner/ctrl_with_slash_to_up_arrow.json
 
 # これはただ作成しておくだけでいい。
 touch  ~/.Xauthority

@@ -13,7 +13,7 @@ nnoremap q :quit<CR>
 nnoremap Q :cquit<CR>
 nnoremap K :mkdir<SPACE>
 nnoremap N :touch<SPACE>
-nnoremap zo :sync %c<CR>
+nnoremap X :!open %c<CR>
 nnoremap ss :sort<CR>
 nnoremap S :shell<CR>
 nnoremap w :view<CR>
