@@ -2,7 +2,7 @@
   "title": "For Japanese （日本語環境向けの設定）(Sai) ",
   "rules": [
     {
-      "description": "右シフトキーを、英数・かなのトグルに変更する",
+      "description": "コマンドキー（左右どちらでも）を単体で押したときに、英数・かなをトグルで切り替える。",
       "manipulators": [
         {
           "type": "basic",
@@ -17,14 +17,28 @@
             }
           ],
           "from": {
-            "key_code": "right_shift",
+            "key_code": "left_command",
             "modifiers": {
               "optional": [
                 "any"
               ]
             }
           },
+          "parameters": {
+            "basic.to_if_held_down_threshold_milliseconds": 100
+          },
           "to": [
+            {
+              "key_code": "left_command",
+              "lazy": true
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "left_command"
+            }
+          ],
+          "to_if_alone": [
             {
               "key_code": "japanese_eisuu"
             }
@@ -43,24 +57,33 @@
             }
           ],
           "from": {
-            "key_code": "right_shift",
+            "key_code": "left_command",
             "modifiers": {
               "optional": [
                 "any"
               ]
             }
           },
+          "parameters": {
+            "basic.to_if_held_down_threshold_milliseconds": 100
+          },
           "to": [
+            {
+              "key_code": "left_command",
+              "lazy": true
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "left_command"
+            }
+          ],
+          "to_if_alone": [
             {
               "key_code": "japanese_kana"
             }
           ]
-        }
-      ]
-    },
-    {
-      "description": "左コマンドキーを、英数・かなのトグルに変更する",
-      "manipulators": [
+        },
         {
           "type": "basic",
           "conditions": [
@@ -74,14 +97,28 @@
             }
           ],
           "from": {
-            "key_code": "left_command",
+            "key_code": "right_command",
             "modifiers": {
               "optional": [
                 "any"
               ]
             }
           },
+          "parameters": {
+            "basic.to_if_held_down_threshold_milliseconds": 100
+          },
           "to": [
+            {
+              "key_code": "right_command",
+              "lazy": true
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "right_command"
+            }
+          ],
+          "to_if_alone": [
             {
               "key_code": "japanese_eisuu"
             }
@@ -100,14 +137,28 @@
             }
           ],
           "from": {
-            "key_code": "left_command",
+            "key_code": "right_command",
             "modifiers": {
               "optional": [
                 "any"
               ]
             }
           },
+          "parameters": {
+            "basic.to_if_held_down_threshold_milliseconds": 100
+          },
           "to": [
+            {
+              "key_code": "right_command",
+              "lazy": true
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "right_command"
+            }
+          ],
+          "to_if_alone": [
             {
               "key_code": "japanese_kana"
             }
