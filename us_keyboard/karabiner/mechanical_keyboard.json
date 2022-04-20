@@ -1,0 +1,47 @@
+{
+  "title": "For mechanical keyboards of 60%",
+  "rules": [
+    {
+      "description": "Ctrl+/を押したときに、↑キーを送信する",
+        "manipulators": [
+          {
+            "type": "basic",
+            "from": {
+              "key_code": "slash",
+              "modifiers": {
+                "mandatory": [
+                  "control"
+                ]
+              }
+            },
+            "to": [
+              {
+                "key_code": "up_arrow"
+              }
+            ]
+          }
+        ]
+    },
+    {
+      "description": "Ctrl+↓を押したときに、↓キーを送信する",
+        "manipulators": [
+          {
+            "type": "basic",
+            "from": {
+              "key_code": "down_arrow",
+              "modifiers": {
+                "mandatory": [
+                  "control"
+                ]
+              }
+            },
+            "to": [
+              {
+                "key_code": "down_arrow"
+              }
+            ]
+          }
+        ]
+    }
+  ]
+}

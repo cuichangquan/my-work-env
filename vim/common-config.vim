@@ -320,4 +320,5 @@ function! Toggle_current_directory() abort
 endfun
 
 command! ToggleCurrentDirectory call Toggle_current_directory()
-
+nnoremap <C-]> g<C-]>
+inoremap <C-]> <ESC>g<C-]>
