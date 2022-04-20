@@ -19,6 +19,7 @@ set nocompatible      " We're running Vim, not Vi!
 set termencoding=utf-8
 set encoding=utf-8     " 文字コードの設定
 set fileencodings=utf-8 " fileencodingsの設定ではencodingの値を一番最後に記述する
+set fileformats=unix,dos,mac
 set hlsearch           " 検索文字をハイライト
 set smartcase          " 大文字小文字無視, 大文字ではじめたら大文字小文字無視しない
 set laststatus=2       " 常にステータスラインを表示

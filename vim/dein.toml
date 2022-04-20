@@ -216,7 +216,6 @@ repo = 'tpope/vim-unimpaired'
 # https://qiita.com/gotchane/items/240004235437e559d0bc#fn1
 [[plugins]]
 repo = 'vim-ruby/vim-ruby'
-# on_ft = ['ruby','eruby']
 
 [[plugins]]
 repo = 'kana/vim-textobj-user'
@@ -224,15 +223,12 @@ on_path = '.*'
 
 [[plugins]]
 repo = 'rhysd/vim-textobj-ruby'
-# on_ft = ['ruby','eruby']
 
 [[plugins]]
 repo = 'tpope/vim-rbenv'
-# on_ft = ['ruby','eruby']
 
 [[plugins]]
 repo = 'tpope/vim-bundler'
-# on_ft = ['ruby','eruby']
 
 [[plugins]]
 repo='PsychoLlama/z.vim'
