@@ -26,10 +26,11 @@ ln -fs ~/sai/my-work-env/others/inputrc     ~/.inputrc
 
 ln -fs ~/sai/my-work-env/peco/config.json          ~/.config/peco/config.json
 
-# ln -fs ~/sai/my-work-env/us_keyboard/karabiner/equal_sign_to_plus_sign.json     ~/.config/karabiner/assets/complex_modifications/equal_sign_to_plus_sign.json
-# ln -fs ~/sai/my-work-env/us_keyboard/karabiner/quote_to_colon.json              ~/.config/karabiner/assets/complex_modifications/quote_to_colon.json
-ln -fs ~/sai/my-work-env/us_keyboard/karabiner/mechanical_keyboard.json           ~/.config/karabiner/assets/complex_modifications/mechanical_keyboard.json
-ln -fs ~/sai/my-work-env/us_keyboard/karabiner/sai.json                           ~/.config/karabiner/assets/complex_modifications/sai.json
+# ln -fs ~/sai/my-work-env/us_keyboard/karabiner/equal_sign_to_plus_sign.json       ~/.config/karabiner/assets/complex_modifications/equal_sign_to_plus_sign.json
+# ln -fs ~/sai/my-work-env/us_keyboard/karabiner/quote_to_colon.json                ~/.config/karabiner/assets/complex_modifications/quote_to_colon.json
+ln -fs ~/sai/my-work-env/us_keyboard/karabiner/mechanical_keyboard.json             ~/.config/karabiner/assets/complex_modifications/mechanical_keyboard.json
+ln -fs ~/sai/my-work-env/us_keyboard/karabiner/sai.json                             ~/.config/karabiner/assets/complex_modifications/sai.json
+ln -fs ~/sai/my-work-env/us_keyboard/karabiner/exchange_slash_to_question_mark.json ~/.config/karabiner/assets/complex_modifications/exchange_slash_to_question_mark.json
 
 # これはただ作成しておくだけでいい。
 touch  ~/.Xauthority
