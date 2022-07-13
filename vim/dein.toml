@@ -244,6 +244,7 @@ hook_add = '''
 '''
 
 # 直接インストールした
+# 効かない時は、Cloneし直すと効いたりする。
 # git clone https://github.com/github/copilot.vim.git   ~/.config/nvim/pack/github/start/copilot.vim
 #[[plugins]]
 #repo = 'github/copilot.vim'
