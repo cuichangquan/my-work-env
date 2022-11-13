@@ -102,10 +102,6 @@ repo = 'Shougo/context_filetype.vim'
 on_path = '.*'
 
 [[plugins]]
-repo = 'tpope/vim-surround'
-on_i = 1
-
-[[plugins]]
 repo = 'simeji/winresizer'
 hook_add = '''
   " If you want to start window resize mode by `Ctrl+T`
