@@ -73,7 +73,7 @@ vnoremap al $
 nnoremap gV `[v`]
 
 nnoremap <Leader>f g*N
-nnoremap <Leader>F *N
+nnoremap <Leader>ff *N
 nnoremap <Leader>j '"
 nnoremap <Leader>[ '[
 nnoremap <Leader>] ']
