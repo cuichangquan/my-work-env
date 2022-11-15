@@ -72,7 +72,8 @@ vnoremap al $
 " https://qastack.jp/vi/31/how-do-i-visually-select-the-block-of-text-i-just-pasted-in-vim
 nnoremap gV `[v`]
 
-nnoremap <Leader>f *N
+nnoremap <Leader>f g*N
+nnoremap <Leader>F *N
 nnoremap <Leader>j '"
 nnoremap <Leader>[ '[
 nnoremap <Leader>] ']
