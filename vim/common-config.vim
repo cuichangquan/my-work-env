@@ -181,19 +181,9 @@ nnoremap <C-p> :<C-u>FZF<CR>
 nnoremap <C-p> :<C-u>FZF<CR>
 
 " https://qiita.com/ymiyamae/items/cea5103c65184f55d62e
-"行頭へ移動
-inoremap <C-b> <C-o>^
-"行末へ移動
-inoremap <C-e> <C-o>$
-"挿入モードのときに hjkl でカーソルを移動する
+"挿入モードのときに hl でカーソルを移動する
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
-inoremap jj <ESC>
-inoremap kk <ESC>
-inoremap hh <ESC>
-" all, hall 結構ある
-" inoremap ll <ESC>
-inoremap <C-s> <ESC>:w<CR>
 
 " コマンド履歴Windowはうるさいから、:qに置き換える
 " map q: :q
@@ -322,4 +312,3 @@ endfun
 
 command! ToggleCurrentDirectory call Toggle_current_directory()
 nnoremap <C-]> g<C-]>
-inoremap <C-]> <ESC>g<C-]>
