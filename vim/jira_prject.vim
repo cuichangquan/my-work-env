@@ -1,7 +1,7 @@
 " 特定のコミットから、BitBucketのPRを探す出す。
 " 数複リポジトリに対応した(2019-02-23)
 " 条件: コミットメッセージにjiraチケット番号が含まれていること( チケット駆動 )
-command! -nargs=0 PR call s:goto_pr()
+command! -nargs=0 PrForBitBucket call s:goto_pr()
 function! s:goto_pr()
   let l:word = expand("<cword>")
   let l:result_for_commit_message = system('git log -n 1 --pretty=format:%s ' . l:word)
@@ -56,4 +56,14 @@ function! s:get_target_repository_name2()
   elseif $BITBUCKET_REPOSITORY3_NAME =~ l:repo_name . "$"
     return $BITBUCKET_REPOSITORY3_NAME
   end
+endfunction
+
+"参考: https://github.com/kyoshidajp/tosa
+" Usage
+" 1. :GB   " ( alias for git blame )
+" 2. :PR
+command! -nargs=0 PR call s:goto_github_pr()
+function! s:goto_github_pr()
+  let l:word = expand("<cword>")
+  silent! execute '!/usr/local/bin/tosa ' . l:word
 endfunction
