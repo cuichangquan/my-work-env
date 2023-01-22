@@ -10,23 +10,6 @@ let g:python_host_prog  = expand('/usr/local/bin/python2')
 let g:python3_host_prog = expand('/usr/local/bin/python3')
 let g:ruby_host_prog = expand('/usr/local/opt/ruby/bin/ruby')
 
-" MEMO
-" 自前のpluginを追加する時に
-" https://www.nekochango.com/entry/linux/nvim/plugin
-" let my_plugin_list = [
-"\ "$HOME/.config/nvim/userautoload/plugins/plugin_neosnippet.vim"           ,
-"\ "$HOME/.config/nvim/userautoload/plugins/plugin_vimfiler.vim"
-"\ ]
-"
-" let i = 0
-" while i < len(my_plugin_list)
-"     let f = my_plugin_list[i]
-"     if filereadable(expand(f))
-"         source `=f`
-"     endif
-"     let i = i + 1
-" endwhile
-
 " About Dein
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 " キャッシュしなくて良いならload_state/save_stateを呼ばないようにしてください。

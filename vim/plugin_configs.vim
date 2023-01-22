@@ -104,6 +104,29 @@ let g:zcd#path = expand('~/sai/z/z.sh')
 " nnoremap <Leader>h :Vifm<CR>
 "-- end ---------------------------------
 
+"-- start ---'junegunn/fzf'---
+
+set rtp+=/usr/local/opt/fzf
+
+" set prefix
+"let g:fzf_command_prefix = 'FZF'
+
+" fzf layout
+let g:fzf_layout = { 'window': '-tabnew' }
+
+" Mapping selecting mappings
+nmap <leader><tab> <plug>(fzf-maps-n)
+
+" Insert mode completion
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
+
+" Advanced customization using autoload functions
+inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
+"-- end ---------------------------------
+
 "-- start ---'github/copilot.vim'---
 " Tabは他のpluginによって使われていたためC-Jに変更した
 imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
@@ -113,3 +136,5 @@ imap <C-a><C-n>   <Plug>(copilot-next)
 imap <C-a><C-j>   <Plug>(copilot-dismiss)
 let g:copilot_no_tab_map = v:true
 "-- end ---------------------------------
+
+

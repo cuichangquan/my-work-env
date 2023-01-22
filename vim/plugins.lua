@@ -19,13 +19,17 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
   use 'Shougo/neoyank.vim'
   use {'Shougo/denite.nvim', requires = {'Shougo/neomru.vim'}}
-  use {'vim-airline/vim-airline', requires = {'vim-airline-themes'}}
+  use {'vim-airline/vim-airline', requires = {'vim-airline/vim-airline-themes'}}
   use 'airblade/vim-rooter'
   use 'rbtnn/vimconsole.vim'
   use 'majutsushi/tagbar'
   use 'bfredl/nvim-miniyank'
   use 'PsychoLlama/z.vim'
   use 'vifm/vifm.vim'
+  use {'Shougo/vimproc.vim', run = 'make'}
+  use {'junegunn/fzf', run = './install'}
+  use {'junegunn/fzf.vim', requires = 'junegunn/fzf'}  -- # BCommitsなどのコマンド
+
   -- use 'github/copilot.vim'
     -- 直接インストールした
     -- 効かない時は、Cloneし直すと効いたりする。
