@@ -2,6 +2,9 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+repo = 'haya14busa/dein-command.vim'
+
+[[plugins]]
 repo = 'tpope/vim-fugitive'
 hook_add = '''
   command! GB Git blame
@@ -19,35 +22,6 @@ hook_add = '''
   "-range=% default is whole file
   command! -range=% GremoveConflictMarkers <line1>,<line2>call RemoveConflictMarkers()
 '''
-
-# Gbrowse to open Github URL
-[[plugins]]
-repo = 'tpope/vim-rhubarb'
-on_cmd = ['Gbrowse']
-
-# Gbrowse to open Bitbucket URL
-[[plugins]]
-repo = 'tommcdo/vim-fubitive'
-on_cmd = ['Gbrowse']
-
-[[plugins]]
-repo = 'skanehira/gh.vim'
-
-[[plugins]]
-repo = 'haya14busa/dein-command.vim'
-
-[[plugins]]
-repo = 'vim-scripts/yanktmp.vim'
-
-# 検索用の素晴らしいプラグイン :S/検索キーワード :%S/xxx/yyy 置換
-[[plugins]]
-repo = 'tpope/vim-abolish'
-
-[[plugins]]
-repo = 'thinca/vim-visualstar'
-
-[[plugins]]
-repo = 'tmhedberg/matchit'
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'
@@ -109,9 +83,6 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'mattesgroeger/vim-bookmarks'
-
-[[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'
 
@@ -126,9 +97,6 @@ hook_add = '''
   let g:airline_theme = 'dark'
   let g:airline#extensions#tabline#enabled = 1
 '''
-
-[[plugins]]
-repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
 repo = 'airblade/vim-rooter'
@@ -190,9 +158,6 @@ hook_add = '''
 # '''
 # on_path = '.*'
 
-[[plugins]]
-repo = 'mattn/webapi-vim'
-
 # このプラグインはJumpToRoutesTxtでController#action名の取得に使用されている
 [[plugins]]
 repo = 'majutsushi/tagbar'
@@ -208,27 +173,6 @@ hook_add = '''
   map p <Plug>(miniyank-autoput)
   map P <Plug>(miniyank-autoPut)
 '''
-
-[[plugins]]
-repo = 'tpope/vim-unimpaired'
-
-# 2019/9/7 ここに置かないと「RubyCursorTag」関数がないという不明なエラーが発生している
-# https://qiita.com/gotchane/items/240004235437e559d0bc#fn1
-[[plugins]]
-repo = 'vim-ruby/vim-ruby'
-
-[[plugins]]
-repo = 'kana/vim-textobj-user'
-on_path = '.*'
-
-[[plugins]]
-repo = 'rhysd/vim-textobj-ruby'
-
-[[plugins]]
-repo = 'tpope/vim-rbenv'
-
-[[plugins]]
-repo = 'tpope/vim-bundler'
 
 [[plugins]]
 repo='PsychoLlama/z.vim'
@@ -257,7 +201,3 @@ hook_add = '''
   imap <C-a><C-j>   <Plug>(copilot-dismiss)
   let g:copilot_no_tab_map = v:true
 '''
-
-[[plugins]]
-repo = 'tpope/vim-surround'
-# on_i = 1
