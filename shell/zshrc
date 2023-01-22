@@ -21,25 +21,22 @@ eval "$(direnv hook zsh)"
 # Useing anyenv
 eval "$(anyenv init -)"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('`$CONDA_BASE_HOME`/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "$CONDA_BASE_HOME/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "$CONDA_BASE_HOME/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="$CONDA_BASE_HOME/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-# condaの仮装環境のコントロール
-# conda activate
-# conda deactivate
-
 # Node.js install
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
+
+# ==> libpq
+# libpq is keg-only, which means it was not symlinked into /usr/local,
+# because conflicts with postgres formula.
+
+# If you need to have libpq first in your PATH, run:
+export PATH="/usr/local/opt/libpq/bin:$PATH"
+
+# For compilers to find libpq you may need to set:
+export LDFLAGS="-L/usr/local/opt/libpq/lib"
+export CPPFLAGS="-I/usr/local/opt/libpq/include"
+
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+#
+export PATH="/usr/local/opt/ruby/bin:$PATH"
