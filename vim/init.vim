@@ -43,6 +43,8 @@ if dein#check_install()
   call dein#install()
 endif
 
+lua require('plugins')
+
 source ~/sai/my-work-env/vim/common-config.vim
 
 " https://github.com/mhinz/neovim-remote

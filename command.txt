@@ -6,7 +6,9 @@ ln -fs ~/sai/my-work-env/vim/vimrc              ~/.vimrc
 ln -fs ~/sai/my-work-env/vim/init.vim           ~/.config/nvim/init.vim
 ln -fs ~/sai/my-work-env/vim/dein.toml          ~/.config/nvim/dein.toml
 ln -fs ~/sai/my-work-env/vim/dein_lazy.toml     ~/.config/nvim/dein_lazy.toml
-ln -fs ~/sai/my-work-env/vim/ginit.vim          ~/.config/nvim/
+
+# ~/.config/nvim/luaのフォルダは手動で作成する
+mkdir -p ~/.config/nvim/lua && ln -fs ~/sai/my-work-env/vim/plugins.lua ~/.config/nvim/lua/plugins.lua
 
 ln -fs ~/sai/my-work-env/tmux/tmux.conf       ~/.tmux.conf
 ln -fs ~/sai/my-work-env/tmux/tmux.conf.osx   ~/.tmux.conf.osx
