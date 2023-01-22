@@ -44,7 +44,9 @@ if dein#check_install()
 endif
 
 lua require('plugins')
-
+lua require('plugin_configs')
+"TODO: plugin_configs.luaへ移行完了したら、plugin_configs.vimを削除
+source ~/sai/my-work-env/vim/plugin_configs.vim
 source ~/sai/my-work-env/vim/common-config.vim
 
 " https://github.com/mhinz/neovim-remote
