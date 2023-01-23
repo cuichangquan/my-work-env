@@ -138,3 +138,9 @@ let g:copilot_no_tab_map = v:true
 "-- end ---------------------------------
 
 
+"-- start ---'vim-scripts/Align'---
+" https://teratail.com/questions/68916
+" <Space>w=を無効にすることで<Space>wを動作を早くしたい
+" <Space>w=の使い方もわからないので、一旦無効にした
+map <Nop>(<Plug>AM_w=) <Plug>AM_w=
+"-- end ---------------------------------

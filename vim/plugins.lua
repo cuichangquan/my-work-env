@@ -44,4 +44,6 @@ return require('packer').startup(function(use)
   -- Gbrowse to open Github URL
   use {'tpope/vim-rhubarb', opt = true, cmd = {'Gbrowse'}}
 
+  use {'vim-scripts/Align', event = 'InsertEnter'}
+
 end)
