@@ -30,6 +30,16 @@ return require('packer').startup(function(use)
   use {'junegunn/fzf', run = './install'}
   use {'junegunn/fzf.vim', requires = 'junegunn/fzf'}  -- # BCommitsなどのコマンド
 
+  -- TODO: 自前のプラグインって、ちゃんと動いている？ => Test
+  -- if dein#load_state('~/.cache/dein')
+  --   call dein#begin('~/.cache/dein')
+  --   call dein#load_toml('~/.config/nvim/dein.toml',      {'lazy': 0})
+  --   call dein#local('~/sai/local-plugins', { 'frozen' : 1 }, ['denite_sources'])
+  --   call dein#end()
+  --   call dein#save_state()
+  -- endif
+  use '~/sai/local-plugins'
+
   -- use 'github/copilot.vim'
     -- 直接インストールした
     -- 効かない時は、Cloneし直すと効いたりする。
