@@ -37,13 +37,42 @@ return require('packer').startup(function(use)
 
   -- Lazy loading:
   -- Load on specific commands
-
   -- Gbrowse to open Bitbucket URL
   use {'tommcdo/vim-fubitive', opt = true, cmd = {'Gbrowse'}}
-
   -- Gbrowse to open Github URL
   use {'tpope/vim-rhubarb', opt = true, cmd = {'Gbrowse'}}
-
   use {'vim-scripts/Align', event = 'InsertEnter'}
+  -- 複数ワードハイライト
+  use {'t9md/vim-quickhl', keys = {'<Plug>(quickhl-manual-this)'}}
+  -- これもなくてならないPlugin: コメントアウト機能(gcc)
+  use {'tyru/caw.vim', keys = {'<Plug>(caw:hatpos:toggle)'}}
+  use {'kana/vim-altr', ft = {'ruby', 'eruby'}}
+  -- from: 'tpope/vim-rails'
+  use {'cuichangquan/vim-rails', ft = {'ruby', 'eruby'}}
+  use {'tyru/open-browser.vim', keys = {'<Plug>(openbrowser-smart-search)'}}
+  use {'cespare/vim-toml', ft = {'toml'}}
+  use {'tpope/vim-repeat', event = 'InsertEnter'}
+  use {'elzr/vim-json', event = 'InsertEnter'}
+  use {'nvie/vim-flake8', ft = 'python'}
+  use {'nathanaelkane/vim-indent-guides', event = 'InsertEnter'}
+  use {'terryma/vim-expand-region', keys = {'<Plug>(expand_region_expand)'}}
+  use {'tpope/vim-dispatch', cmd = {'Dispatch','Start','Focus'}}
+  use {'vim-jp/vimdoc-ja', cmd = {'help', 'h'}}
+  use {'thinca/vim-quickrun', event = 'InsertEnter'}
+  use {'tpope/vim-endwise', ft = 'ruby'}
+  use {'Shougo/context_filetype.vim', event = 'InsertEnter'}
+  use {'simeji/winresizer', event = 'InsertEnter'}
+  use {
+    'nanonanomachine/vim-redash',
+    requires = 'webapi-vim',
+    cmd = {
+      'RedashDescribe',
+      'RedashExecute',
+      'RedashPost',
+      'RedashSetDataSource',
+      'RedashShowDataSources',
+      'RedashShowTables'
+    }
+  }
 
 end)
