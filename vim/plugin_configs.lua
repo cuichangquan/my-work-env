@@ -4,6 +4,20 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 })
 
 vim.cmd([[
+" https://postd.cc/how-to-boost-your-vim-productivity/
+let mapleader = "\<Space>"
+
+" https://qiita.com/xeno1991/items/8d1c8f38595337bab7c8
+let g:tex_conceal='' " texのconcealを無効化（#^ω^）
+
+" https://github.com/mhinz/neovim-remote
+" このように設定することで、lazygitがneovimで「e」キーで対象ファイルを開けた。
+let $VISUAL = 'nvr'
+" 「e」で対象ファイル開けなかった。そもそも引数があると、だめぽい。
+" let $VISUAL = 'nvr -cc split --remote-wait'
+]])
+
+vim.cmd([[
 "-- start ---'tpope/vim-fugitive'--------
 command! GB Git blame
 
@@ -14,7 +28,7 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 "Delete all Git conflict markers
 "https://vi.stackexchange.com/questions/10534/is-there-a-way-to-take-both-when-using-vim-as-merge-tool
 function! RemoveConflictMarkers() range
-  silent execute a:firstline.','.a:lastline . ' g/^<\{7}\|^|\{7}\|^=\{7}\|^>\{7}/d'
+silent execute a:firstline.','.a:lastline . ' g/^<\{7}\|^|\{7}\|^=\{7}\|^>\{7}/d'
 endfunction
 
 "-range=% default is whole file
@@ -26,14 +40,14 @@ command! -range=% GremoveConflictMarkers <line1>,<line2>call RemoveConflictMarke
 "-- start ---'Shougo/denite.nvim'--------
 " Define mappings
 function! s:denite_my_settings() abort
-  nnoremap <silent><buffer><expr> <CR>            denite#do_map('do_action')
-  nnoremap <silent><buffer><expr> <TAB>           denite#do_map('choose_action')
-  nnoremap <silent><buffer><expr> d               denite#do_map('do_action', 'delete')
-  nnoremap <silent><buffer><expr> p               denite#do_map('do_action', 'preview')
-  nnoremap <silent><buffer><expr><nowait> q       denite#do_map('quit')
-  nnoremap <silent><buffer><expr><nowait> <ESC>   denite#do_map('quit')
-  nnoremap <silent><buffer><expr> i               denite#do_map('open_filter_buffer')
-  nnoremap <silent><buffer><expr> <Space>         denite#do_map('toggle_select').'j'
+nnoremap <silent><buffer><expr> <CR>            denite#do_map('do_action')
+nnoremap <silent><buffer><expr> <TAB>           denite#do_map('choose_action')
+nnoremap <silent><buffer><expr> d               denite#do_map('do_action', 'delete')
+nnoremap <silent><buffer><expr> p               denite#do_map('do_action', 'preview')
+nnoremap <silent><buffer><expr><nowait> q       denite#do_map('quit')
+nnoremap <silent><buffer><expr><nowait> <ESC>   denite#do_map('quit')
+nnoremap <silent><buffer><expr> i               denite#do_map('open_filter_buffer')
+nnoremap <silent><buffer><expr> <Space>         denite#do_map('toggle_select').'j'
 endfunction
 
 autocmd FileType denite call s:denite_my_settings()
@@ -91,7 +105,7 @@ let g:rooter_change_directory_for_non_project_files = ''
 
 "-- start ---'majutsushi/tagbar'---
 " このプラグインはJumpToRoutesTxtでController#action名の取得に使用されている
-  nmap <F8> :TagbarToggle<CR>
+nmap <F8> :TagbarToggle<CR>
 "-- end ---------------------------------
 
 "-- start ---'bfredl/nvim-miniyank'---
@@ -209,5 +223,4 @@ vmap <C-v> <Plug>(expand_region_shrink)
 " If you want to start window resize mode by `Ctrl+T`
 let g:winresizer_start_key = '<C-T>'
 "-- end ---------------------------------
-
 ]])

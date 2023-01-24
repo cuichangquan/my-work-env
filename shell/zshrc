@@ -38,5 +38,5 @@ export CPPFLAGS="-I/usr/local/opt/libpq/include"
 
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-#
+# ruby 3.2
 export PATH="/usr/local/opt/ruby/bin:$PATH"
