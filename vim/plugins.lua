@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
   use 'tpope/vim-bundler'
   use 'tpope/vim-fugitive'
   use 'Shougo/neoyank.vim'
+  use 'simeji/winresizer'
   use {'Shougo/denite.nvim', requires = {'Shougo/neomru.vim'}}
   use {'vim-airline/vim-airline', requires = {'vim-airline/vim-airline-themes'}}
   use 'airblade/vim-rooter'
@@ -29,16 +30,15 @@ return require('packer').startup(function(use)
   use {'Shougo/vimproc.vim', run = 'make'}
   use {'junegunn/fzf', run = './install'}
   use {'junegunn/fzf.vim', requires = 'junegunn/fzf'}  -- # BCommitsなどのコマンド
+  use({
+    "jackMort/ChatGPT.nvim",
+    config = function() require("chatgpt").setup({}) end,
+    requires = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" }
+  })
 
-  -- TODO: 自前のプラグインって、ちゃんと動いている？ => Test
-  -- if dein#load_state('~/.cache/dein')
-  --   call dein#begin('~/.cache/dein')
-  --   call dein#load_toml('~/.config/nvim/dein.toml',      {'lazy': 0})
-  --   call dein#local('~/sai/local-plugins', { 'frozen' : 1 }, ['denite_sources'])
-  --   call dein#end()
-  --   call dein#save_state()
-  -- endif
-  use '~/sai/local-plugins'
+  -- TODO: うまく動かない
+  -- call dein#local('~/sai/local-plugins', { 'frozen' : 1 }, ['denite_sources'])
+  use { '~/sai/local-plugins', module = 'denite_sources' }
 
   -- use 'github/copilot.vim'
     -- 直接インストールした
@@ -71,18 +71,10 @@ return require('packer').startup(function(use)
   use {'thinca/vim-quickrun', event = 'InsertEnter'}
   use {'tpope/vim-endwise', ft = 'ruby'}
   use {'Shougo/context_filetype.vim', event = 'InsertEnter'}
-  use {'simeji/winresizer', event = 'InsertEnter'}
   use {
     'nanonanomachine/vim-redash',
     requires = 'webapi-vim',
-    cmd = {
-      'RedashDescribe',
-      'RedashExecute',
-      'RedashPost',
-      'RedashSetDataSource',
-      'RedashShowDataSources',
-      'RedashShowTables'
-    }
+    cmd = { 'RedashDescribe', 'RedashExecute', 'RedashPost', 'RedashSetDataSource', 'RedashShowDataSources', 'RedashShowTables' }
   }
 
 end)
