@@ -3,10 +3,15 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   command = "PackerCompile",
 })
 
-vim.cmd([[
-" https://postd.cc/how-to-boost-your-vim-productivity/
-let mapleader = "\<Space>"
+local keymap = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
 
+-- Remap space as leader key
+keymap("", "<Space>", "<Nop>", opts)
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+vim.cmd([[
 " https://qiita.com/xeno1991/items/8d1c8f38595337bab7c8
 let g:tex_conceal='' " texのconcealを無効化（#^ω^）
 
