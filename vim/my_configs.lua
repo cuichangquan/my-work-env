@@ -34,6 +34,10 @@ vim.o.clipboard = 'unnamedplus'
 -- カーソルを行頭，行末で止まらないようにする
 -- vim.o.whichwrap = 'b,s,h,l,<,>,[,]'
 
+-- https://qiita.com/xeno1991/items/8d1c8f38595337bab7c8
+-- texのconcealを無効化（#^ω^）
+vim.g.tex_conceal = ""
+
 vim.cmd([[
   colorscheme elflord
   syntax on

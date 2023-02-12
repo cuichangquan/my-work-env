@@ -1,27 +1,3 @@
-vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = { "plugins.lua" },
-  command = "PackerCompile",
-})
-
-local keymap = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
-
--- Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
-vim.cmd([[
-" https://qiita.com/xeno1991/items/8d1c8f38595337bab7c8
-let g:tex_conceal='' " texのconcealを無効化（#^ω^）
-
-" https://github.com/mhinz/neovim-remote
-" このように設定することで、lazygitがneovimで「e」キーで対象ファイルを開けた。
-let $VISUAL = 'nvr'
-" 「e」で対象ファイル開けなかった。そもそも引数があると、だめぽい。
-" let $VISUAL = 'nvr -cc split --remote-wait'
-]])
-
 vim.cmd([[
 "-- start ---'tpope/vim-fugitive'--------
 command! GB Git blame
