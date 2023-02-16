@@ -6,6 +6,9 @@
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 # export FZF_CTRL_T_OPTS='--preview "bat  --color=always --style=header,grid --line-range :100 {}"'
 
+# https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # https://ja.stackoverflow.com/questions/21718/touch%E3%81%A7mkdir-p%E3%82%82%E8%A1%8C%E3%81%84%E3%81%9F%E3%81%84
 dirtouch() {
     mkdir -p "$(dirname $1)"
@@ -62,7 +65,6 @@ alias vimrc="vim ~/sai/my-work-env/vim/vimrc"
 alias init.vim="my;vim ."
 alias cui="cd ~/sai/local-plugins/denite_sources/rplugin/python3/denite/source/"
 alias cui-p="cd ~/sai/local-plugins/denite_sources/"
-alias g='lazygit'
 alias ccq='cd ~/sai/ccq-rails-vuejs-app'
 
 alias b="vim ~/.public_alias"

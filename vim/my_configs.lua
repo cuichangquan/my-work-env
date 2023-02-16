@@ -1,3 +1,5 @@
+local keymap = vim.api.nvim_set_keymap
+
 -- Option系 --
 vim.o.timeout = 'timeoutlen=500 ttimeoutlen=50' -- https://yukidarake.hateblo.jp/entry/2015/07/10/201356
 vim.o.foldmethod = 'manual'                     -- https://qiita.com/izumin5210/items/7e0ad2f86d0686d8b376
@@ -34,9 +36,15 @@ vim.o.clipboard = 'unnamedplus'
 -- カーソルを行頭，行末で止まらないようにする
 -- vim.o.whichwrap = 'b,s,h,l,<,>,[,]'
 
+-- Remap space as leader key
+keymap("", "<Space>", "<Nop>", { noremap = true, silent = true })
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 -- https://qiita.com/xeno1991/items/8d1c8f38595337bab7c8
 -- texのconcealを無効化（#^ω^）
 vim.g.tex_conceal = ""
+
 
 vim.cmd([[
   colorscheme elflord
@@ -298,3 +306,10 @@ vim.cmd([[
 -- command! -bang -nargs=0 UndoClear call <SID>ForgetUndo('<bang>')
 -- command! -bang -nargs=0 ClearUndo call <SID>ForgetUndo('<bang>')
 
+vim.cmd([[
+" https://github.com/mhinz/neovim-remote
+" このように設定することで、lazygitがneovimで「e」キーで対象ファイルを開けた。
+let $VISUAL = 'nvr'
+" 「e」で対象ファイル開けなかった。そもそも引数があると、だめぽい。
+" let $VISUAL = 'nvr -cc split --remote-wait'
+]])

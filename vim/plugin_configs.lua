@@ -1,3 +1,8 @@
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = { "plugins.lua" },
+  command = "PackerCompile",
+})
+
 vim.cmd([[
 "-- start ---'tpope/vim-fugitive'--------
 command! GB Git blame
@@ -5,18 +10,7 @@ command! GB Git blame
 " http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 autocmd BufReadPost fugitive://* set bufhidden=delete
-
-"Delete all Git conflict markers
-"https://vi.stackexchange.com/questions/10534/is-there-a-way-to-take-both-when-using-vim-as-merge-tool
-function! RemoveConflictMarkers() range
-silent execute a:firstline.','.a:lastline . ' g/^<\{7}\|^|\{7}\|^=\{7}\|^>\{7}/d'
-endfunction
-
-"-range=% default is whole file
-command! -range=% GremoveConflictMarkers <line1>,<line2>call RemoveConflictMarkers()
-
 "-- end ---------------------------------
-
 
 "-- start ---'Shougo/denite.nvim'--------
 " Define mappings
