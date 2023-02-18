@@ -1,4 +1,8 @@
 local keymap = vim.api.nvim_set_keymap
+-- Remap space as leader key
+keymap("", "<Space>", "<Nop>", { noremap = true, silent = true })
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- Option系 --
 vim.o.timeout = 'timeoutlen=500 ttimeoutlen=50' -- https://yukidarake.hateblo.jp/entry/2015/07/10/201356
@@ -25,7 +29,7 @@ vim.o.notagbsearch = true
 vim.o.ignorecase = true
 vim.o.ruler = true
 vim.o.virtualedit = 'block'
-vim.o.nowrap = true                             -- 画面の端で行を折り返すのをやめる方法
+vim.o.wrap = false                             -- 画面の端で行を折り返すのをやめる方法
 vim.o.clipboard = 'unnamedplus'
 
 -- vim.o.autoindent = true                      -- 新しい行を開始したときに、新しい行のインデントを現在行と同じ量にする。
@@ -36,15 +40,9 @@ vim.o.clipboard = 'unnamedplus'
 -- カーソルを行頭，行末で止まらないようにする
 -- vim.o.whichwrap = 'b,s,h,l,<,>,[,]'
 
--- Remap space as leader key
-keymap("", "<Space>", "<Nop>", { noremap = true, silent = true })
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 -- https://qiita.com/xeno1991/items/8d1c8f38595337bab7c8
 -- texのconcealを無効化（#^ω^）
 vim.g.tex_conceal = ""
-
 
 vim.cmd([[
   colorscheme elflord

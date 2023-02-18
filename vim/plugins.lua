@@ -30,12 +30,9 @@ return require('packer').startup(function(use)
   use {'Shougo/vimproc.vim', run = 'make'}
   use {'junegunn/fzf', run = './install'}
   use {'junegunn/fzf.vim', requires = 'junegunn/fzf'}  -- # BCommitsなどのコマンド
-  use({
-    "jackMort/ChatGPT.nvim",
-    config = function() require("chatgpt").setup({}) end,
-    requires = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" }
-  })
-
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("toggleterm").setup()
+  end}
   -- TODO: うまく動かない
   -- call dein#local('~/sai/local-plugins', { 'frozen' : 1 }, ['denite_sources'])
   use { '~/sai/local-plugins', module = 'denite_sources' }
