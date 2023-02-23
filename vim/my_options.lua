@@ -38,4 +38,10 @@ vim.o.clipboard = 'unnamedplus'
 -- texのconcealを無効化（#^ω^）
 vim.g.tex_conceal = ""
 
-
+vim.cmd([[
+  colorscheme elflord
+  syntax on
+  filetype on            " ファイル形式の検出を有効化
+  filetype indent on    " Enable filetype-specific indenting
+  filetype plugin on    " Enable filetype-specific plugins
+]])

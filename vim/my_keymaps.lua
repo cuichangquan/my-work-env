@@ -1,26 +1,20 @@
 -- TODO
 local keymap = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
 -- Remap space as leader key
 keymap("", "<Space>", "<Nop>", { noremap = true, silent = true })
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.cmd([[
-  colorscheme elflord
-  syntax on
-  filetype on            " ファイル形式の検出を有効化
-  filetype indent on    " Enable filetype-specific indenting
-  filetype plugin on    " Enable filetype-specific plugins
+-- <Leader>のmapについて、
+keymap("n", "<Leader>w", ":w<CR>", { noremap = true })
+keymap("n", "<Leader>q", ":q<CR>", { noremap = true })
+keymap("n", "<Leader><Leader>q", ":qa!<CR>", { noremap = true })
 
+vim.cmd([[
   " -- map系 --
   " <Del> key: ノーマルモードで数値 (count) を入力しているときは、数字の最後の桁を削除します。
   map CTRL-V <BS>   CTRL-V <Del>
-
-  " <Leader>のmapについて、
-  nnoremap <Leader>w :w<CR>
-  nnoremap <Leader>q :q<CR>
-  nnoremap <Leader><Leader>q :qa!<CR>
-  nnoremap <Leader><Leader>b :set filetype=bash<CR>
 
   " 素早く動きたいので
   nnoremap tt F
