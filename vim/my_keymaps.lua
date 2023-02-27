@@ -11,20 +11,19 @@ keymap("n", "<Leader>w", ":w<CR>", { noremap = true })
 keymap("n", "<Leader>q", ":q<CR>", { noremap = true })
 keymap("n", "<Leader><Leader>q", ":qa!<CR>", { noremap = true })
 
+-- 素早く動きたいので
+keymap("n", "tt", "F", { noremap = true })
+keymap("n", "aa", "^", { noremap = true })
+keymap("n", "al", "$", { noremap = true })
+-- -- jump to the middle of current line
+keymap("n", "am", ":call cursor(0, virtcol('$')/2)<CR>", { noremap = true })
+keymap("v", "aa", "^", { noremap = true })
+keymap("v", "al", "$", { noremap = true })
+
 vim.cmd([[
   " -- map系 --
   " <Del> key: ノーマルモードで数値 (count) を入力しているときは、数字の最後の桁を削除します。
   map CTRL-V <BS>   CTRL-V <Del>
-
-  " 素早く動きたいので
-  nnoremap tt F
-  nnoremap aa ^
-  nnoremap al $
-  " jump to the middle of current line
-  nnoremap am :call cursor(0, virtcol('$')/2)<CR>
-
-  vnoremap aa ^
-  vnoremap al $
 
   " 貼り付けたばかりのテキストを再選択
   " https://qastack.jp/vi/31/how-do-i-visually-select-the-block-of-text-i-just-pasted-in-vim
