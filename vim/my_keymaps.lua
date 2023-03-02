@@ -20,21 +20,23 @@ keymap("n", "am", ":call cursor(0, virtcol('$')/2)<CR>", { noremap = true })
 keymap("v", "aa", "^", { noremap = true })
 keymap("v", "al", "$", { noremap = true })
 
+-- " 貼り付けたばかりのテキストを再選択
+-- " https://qastack.jp/vi/31/how-do-i-visually-select-the-block-of-text-i-just-pasted-in-vim
+keymap("n", "gV", "`[v`]", { noremap = true })
+keymap("n", "<Leader>f", "g*N", { noremap = true })
+-- " TODO
+-- keymap("n", "<Leader>j", "'"", { noremap = true })
+keymap("n", "<Leader>F", "*N", { noremap = true })
+keymap("n", "<Leader>[", "'[", { noremap = true })
+keymap("n", "<Leader>]", "']", { noremap = true })
+keymap("n", ",,", "A,<ESC", { noremap = true })
+
 vim.cmd([[
   " -- map系 --
   " <Del> key: ノーマルモードで数値 (count) を入力しているときは、数字の最後の桁を削除します。
   map CTRL-V <BS>   CTRL-V <Del>
 
-  " 貼り付けたばかりのテキストを再選択
-  " https://qastack.jp/vi/31/how-do-i-visually-select-the-block-of-text-i-just-pasted-in-vim
-  nnoremap gV `[v`]
-
-  nnoremap <Leader>f g*N
-  nnoremap <Leader>F *N
-  nnoremap <Leader>j '"
-  nnoremap <Leader>[ '[
-  nnoremap <Leader>] ']
-  nnoremap ,,  A,<ESC>
+  nnoremap <Leader>j, '"
 
   " これも生産性を生む
   " gn gN: select text highlighted by search
