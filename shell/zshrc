@@ -10,6 +10,10 @@ if [ -f ~/.private_alias ]; then
   . ~/.private_alias
 fi
 
+if [ -f ~/.private_alias_my_pj ]; then
+  . ~/.private_alias_my_pj
+fi
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/z/z.sh ] && source ~/z/z.sh
 

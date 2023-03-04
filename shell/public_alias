@@ -69,6 +69,7 @@ alias ccq='cd ~/sai/ccq-rails-vuejs-app'
 
 alias b="vim ~/.public_alias"
 alias bb="vim ~/.private_alias"
+alias bbb="vim ~/.private_alias_my_pj"
 
 # ZSHの場合のgitコマンド補完設定
 # https://blog.qnyp.com/2013/05/14/zsh-git-completion/
