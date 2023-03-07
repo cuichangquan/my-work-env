@@ -24,26 +24,23 @@ keymap("v", "al", "$", { noremap = true })
 -- " https://qastack.jp/vi/31/how-do-i-visually-select-the-block-of-text-i-just-pasted-in-vim
 keymap("n", "gV", "`[v`]", { noremap = true })
 keymap("n", "<Leader>f", "g*N", { noremap = true })
+
 -- " TODO
 -- keymap("n", "<Leader>j", "'"", { noremap = true })
+vim.cmd([[nnoremap <Leader>j, '"]])
 keymap("n", "<Leader>F", "*N", { noremap = true })
 keymap("n", "<Leader>[", "'[", { noremap = true })
 keymap("n", "<Leader>]", "']", { noremap = true })
 keymap("n", ",,", "A,<ESC", { noremap = true })
 
+keymap("n", "<Leader>g", ":tabnew<CR>:Lazygit<CR>", { noremap = true })
+keymap("n", "<Leader>h", ":call Open_existed_vifm_buffer()<CR>", { noremap = true })
+keymap("n", "<Leader>d", ":call Toggle_current_directory()<CR>", { noremap = true })
+
 vim.cmd([[
   " -- map系 --
   " <Del> key: ノーマルモードで数値 (count) を入力しているときは、数字の最後の桁を削除します。
   map CTRL-V <BS>   CTRL-V <Del>
-
-  nnoremap <Leader>j, '"
-
-  " これも生産性を生む
-  " gn gN: select text highlighted by search
-
-  nnoremap <Leader>g :tabnew<CR>:Lazygit<CR>
-  nnoremap <Leader>h :call Open_existed_vifm_buffer()<CR>
-  nnoremap <Leader>d :call Toggle_current_directory()<CR>
 
   " Plugin 't9md/vim-quickhl'
   "---------------------------------------------------
