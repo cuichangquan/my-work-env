@@ -37,18 +37,18 @@ keymap("n", "<Leader>g", ":tabnew<CR>:Lazygit<CR>", { noremap = true })
 keymap("n", "<Leader>h", ":call Open_existed_vifm_buffer()<CR>", { noremap = true })
 keymap("n", "<Leader>d", ":call Toggle_current_directory()<CR>", { noremap = true })
 
+-- " Plugin 't9md/vim-quickhl'
+-- "---------------------------------------------------
+-- " nmap <Leader>m <Plug>(quickhl-manual-this)
+-- " xmap <Leader>m <Plug>(quickhl-manual-this)
+-- " nmap <Leader>M <Plug>(quickhl-manual-reset)
+-- " xmap <Leader>M <Plug>(quickhl-manual-reset)
+-- "---------------------------------------------------
+
 vim.cmd([[
   " -- map系 --
   " <Del> key: ノーマルモードで数値 (count) を入力しているときは、数字の最後の桁を削除します。
   map CTRL-V <BS>   CTRL-V <Del>
-
-  " Plugin 't9md/vim-quickhl'
-  "---------------------------------------------------
-  " nmap <Leader>m <Plug>(quickhl-manual-this)
-  " xmap <Leader>m <Plug>(quickhl-manual-this)
-  " nmap <Leader>M <Plug>(quickhl-manual-reset)
-  " xmap <Leader>M <Plug>(quickhl-manual-reset)
-  "---------------------------------------------------
 
   " https://github.com/MattesGroeger/vim-bookmarks
   " Add/remove bookmark at current line	        mm :BookmarkToggle
