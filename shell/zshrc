@@ -20,6 +20,9 @@ fi
 alias zshrc='vim ~/.zshrc'
 alias sss='source ~/.zshrc'
 
+# ruby 3.2
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+
 # Useing direnv
 eval "$(direnv hook zsh)"
 # Useing anyenv
@@ -41,6 +44,3 @@ export LDFLAGS="-L/usr/local/opt/libpq/lib"
 export CPPFLAGS="-I/usr/local/opt/libpq/include"
 
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-# ruby 3.2
-export PATH="/usr/local/opt/ruby/bin:$PATH"
