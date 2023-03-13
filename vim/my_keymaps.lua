@@ -45,16 +45,16 @@ keymap("n", "<Leader>d", ":call Toggle_current_directory()<CR>", { noremap = tru
 -- " xmap <Leader>M <Plug>(quickhl-manual-reset)
 -- "---------------------------------------------------
 
+-- " https://github.com/MattesGroeger/vim-bookmarks
+-- " Add/remove bookmark at current line	        mm :BookmarkToggle
+-- " Show all bookmarks (toggle)	                ma :BookmarkShowAll
+-- " Clear bookmarks in current buffer only	    mc :BookmarkClear
+-- " Clear bookmarks in all buffers	            mx :BookmarkClearAll
+
 vim.cmd([[
   " -- map系 --
   " <Del> key: ノーマルモードで数値 (count) を入力しているときは、数字の最後の桁を削除します。
   map CTRL-V <BS>   CTRL-V <Del>
-
-  " https://github.com/MattesGroeger/vim-bookmarks
-  " Add/remove bookmark at current line	        mm :BookmarkToggle
-  " Show all bookmarks (toggle)	                ma :BookmarkShowAll
-  " Clear bookmarks in current buffer only	    mc :BookmarkClear
-  " Clear bookmarks in all buffers	            mx :BookmarkClearAll
 
   " 縦分割版gf
   " https://yuheikagaya.hatenablog.jp/entry/2012/12/03/202556

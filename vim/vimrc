@@ -51,7 +51,7 @@ Plugin 'Shougo/neoyank.vim'
 Plugin 'airblade/vim-rooter'
 
 " -- other --
-Plugin 'chrisbra/csv.vim'
+" Plugin 'chrisbra/csv.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
