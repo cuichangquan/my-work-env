@@ -51,14 +51,14 @@ keymap("n", "<Leader>d", ":call Toggle_current_directory()<CR>", { noremap = tru
 -- " Clear bookmarks in current buffer only	    mc :BookmarkClear
 -- " Clear bookmarks in all buffers	            mx :BookmarkClearAll
 
+-- " 縦分割版gf
+-- " https://yuheikagaya.hatenablog.jp/entry/2012/12/03/202556
+keymap("n", "gs", ":vertical wincmd f<CR>", { noremap = true })
+
 vim.cmd([[
   " -- map系 --
   " <Del> key: ノーマルモードで数値 (count) を入力しているときは、数字の最後の桁を削除します。
   map CTRL-V <BS>   CTRL-V <Del>
-
-  " 縦分割版gf
-  " https://yuheikagaya.hatenablog.jp/entry/2012/12/03/202556
-  nnoremap gs :vertical wincmd f<CR>
 
   " Make Terminal default mode insert
   " https://github.com/neovim/neovim/issues/8816
