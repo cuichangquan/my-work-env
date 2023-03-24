@@ -55,6 +55,16 @@ keymap("n", "<Leader>d", ":call Toggle_current_directory()<CR>", { noremap = tru
 -- " https://yuheikagaya.hatenablog.jp/entry/2012/12/03/202556
 keymap("n", "gs", ":vertical wincmd f<CR>", { noremap = true })
 
+keymap("n", "<C-k>", "10<UP>", { noremap = true })
+keymap("n", "<C-j>", "10<DOWN>", { noremap = true })
+keymap("n", "<C-h>", "15<LEFT>", { noremap = true })
+keymap("n", "<C-l>", "15<RIGHT>", { noremap = true })
+
+keymap("v", "<C-k>", "10<UP>", { noremap = true })
+keymap("v", "<C-j>", "10<DOWN>", { noremap = true })
+keymap("v", "<C-h>", "15<LEFT>", { noremap = true })
+keymap("v", "<C-l>", "15<RIGHT>", { noremap = true })
+
 vim.cmd([[
   " -- map系 --
   " <Del> key: ノーマルモードで数値 (count) を入力しているときは、数字の最後の桁を削除します。
@@ -82,16 +92,6 @@ vim.cmd([[
   " tnoremap ˚ <C-\><C-N><C-w>k
   " " <A-l>
   " tnoremap ¬ <C-\><C-N><C-w>l
-
-  nnoremap <C-k> 10<UP>
-  nnoremap <C-j> 10<DOWN>
-  nnoremap <C-h> 15<LEFT>
-  nnoremap <C-l> 15<RIGHT>
-
-  vnoremap <C-k> 10<UP>
-  vnoremap <C-j> 10<DOWN>
-  vnoremap <C-h> 15<LEFT>
-  vnoremap <C-l> 15<RIGHT>
 
   " From: https://qiita.com/tekkoc/items/98adcadfa4bdc8b5a6ca
   nnoremap s <Nop>

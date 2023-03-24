@@ -44,3 +44,6 @@ export LDFLAGS="-L/usr/local/opt/libpq/lib"
 export CPPFLAGS="-I/usr/local/opt/libpq/include"
 
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# CSVフォーマットを検証するためのツールである
+export PATH=$PATH:$HOME/bin/csvlint
