@@ -37,6 +37,13 @@ keymap("n", "<Leader>g", ":tabnew<CR>:Lazygit<CR>", { noremap = true })
 keymap("n", "<Leader>h", ":call Open_existed_vifm_buffer()<CR>", { noremap = true })
 keymap("n", "<Leader>d", ":call Toggle_current_directory()<CR>", { noremap = true })
 
+-- " From: https://qiita.com/tekkoc/items/98adcadfa4bdc8b5a6ca
+keymap("n", "s", "<Nop>", { noremap = true })
+keymap("n", "sj", "<C-w>j", { noremap = true })
+keymap("n", "sk", "<C-w>k", { noremap = true })
+keymap("n", "sl", "<C-w>l", { noremap = true })
+keymap("n", "sh", "<C-w>h", { noremap = true })
+
 -- " Plugin 't9md/vim-quickhl'
 -- "---------------------------------------------------
 -- " nmap <Leader>m <Plug>(quickhl-manual-this)
@@ -81,24 +88,6 @@ vim.cmd([[
 
   " http://cohama.hateblo.jp/entry/20130108/1357664352
   vnoremap P "0p
-
-  " https://neovim.io/doc/user/nvim_terminal_emulator.html#terminal-emulator
-  tnoremap <Esc><Esc> <C-\><C-n>
-  " " <A-h>
-  " tnoremap ˙ <C-\><C-N><C-w>h
-  " " <A-j>
-  " tnoremap ∆ <C-\><C-N><C-w>j
-  " " <A-k>
-  " tnoremap ˚ <C-\><C-N><C-w>k
-  " " <A-l>
-  " tnoremap ¬ <C-\><C-N><C-w>l
-
-  " From: https://qiita.com/tekkoc/items/98adcadfa4bdc8b5a6ca
-  nnoremap s <Nop>
-  nnoremap sj <C-w>j
-  nnoremap sk <C-w>k
-  nnoremap sl <C-w>l
-  nnoremap sh <C-w>h
 
   " window移動
   nnoremap sJ <C-w>J
