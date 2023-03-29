@@ -1,6 +1,6 @@
--- TODO
 local keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
+
 -- Remap space as leader key
 keymap("", "<Space>", "<Nop>", { noremap = true, silent = true })
 vim.g.mapleader = " "
@@ -72,6 +72,12 @@ keymap("v", "<C-j>", "10<DOWN>", { noremap = true })
 keymap("v", "<C-h>", "15<LEFT>", { noremap = true })
 keymap("v", "<C-l>", "15<RIGHT>", { noremap = true })
 
+-- " window移動
+keymap("n", "sJ", "<C-w>J", { noremap = true })
+keymap("n", "sK", "<C-w>K", { noremap = true })
+keymap("n", "sL", "<C-w>L", { noremap = true })
+keymap("n", "sH", "<C-w>H", { noremap = true })
+
 vim.cmd([[
   " -- map系 --
   " <Del> key: ノーマルモードで数値 (count) を入力しているときは、数字の最後の桁を削除します。
@@ -89,14 +95,8 @@ vim.cmd([[
   " http://cohama.hateblo.jp/entry/20130108/1357664352
   vnoremap P "0p
 
-  " window移動
-  nnoremap sJ <C-w>J
-  nnoremap sK <C-w>K
-  nnoremap sL <C-w>L
-  nnoremap sH <C-w>H
   " window回転
   nnoremap sr <C-w>r
-
   nnoremap sn :<C-u>bn<CR>
   nnoremap sp :<C-u>bp<CR>
   " buffer close
