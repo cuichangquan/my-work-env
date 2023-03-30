@@ -78,6 +78,13 @@ keymap("n", "sK", "<C-w>K", { noremap = true })
 keymap("n", "sL", "<C-w>L", { noremap = true })
 keymap("n", "sH", "<C-w>H", { noremap = true })
 
+-- " window回転
+keymap("n", "sr", "<C-w>r", { noremap = true })
+keymap("n", "sn", ":<C-u>bn<CR>", { noremap = true })
+keymap("n", "sp", ":<C-u>bp<CR>", { noremap = true })
+-- " buffer close
+keymap("n", "sq", ":<C-u>bd<CR>", { noremap = true })
+
 vim.cmd([[
   " -- map系 --
   " <Del> key: ノーマルモードで数値 (count) を入力しているときは、数字の最後の桁を削除します。
@@ -94,15 +101,6 @@ vim.cmd([[
 
   " http://cohama.hateblo.jp/entry/20130108/1357664352
   vnoremap P "0p
-
-  " window回転
-  nnoremap sr <C-w>r
-  nnoremap sn :<C-u>bn<CR>
-  nnoremap sp :<C-u>bp<CR>
-  " buffer close
-  nnoremap sq :<C-u>bd<CR>
-  " nnoremap <CR> G
-  " nnoremap <BS> gg
 
   noremap gV `[v`]
   vnoremap <silent> y y`]
