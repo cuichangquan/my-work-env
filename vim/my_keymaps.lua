@@ -85,6 +85,9 @@ keymap("n", "sp", ":<C-u>bp<CR>", { noremap = true })
 -- " buffer close
 keymap("n", "sq", ":<C-u>bd<CR>", { noremap = true })
 
+  -- " http://cohama.hateblo.jp/entry/20130108/1357664352
+keymap("v", "P", '"0p', { noremap = true })
+
 vim.cmd([[
   " -- map系 --
   " <Del> key: ノーマルモードで数値 (count) を入力しているときは、数字の最後の桁を削除します。
@@ -98,9 +101,6 @@ vim.cmd([[
   command! Lazygit tabnew term://lazygit
 
   autocmd TermClose term://.//*:lazygit* bprevious | bwipeout!
-
-  " http://cohama.hateblo.jp/entry/20130108/1357664352
-  vnoremap P "0p
 
   noremap gV `[v`]
   vnoremap <silent> y y`]
