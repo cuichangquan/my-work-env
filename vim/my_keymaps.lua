@@ -88,6 +88,10 @@ keymap("n", "sq", ":<C-u>bd<CR>", { noremap = true })
   -- " http://cohama.hateblo.jp/entry/20130108/1357664352
 keymap("v", "P", '"0p', { noremap = true })
 
+keymap("n", "ss", ":<C-u>split<CR>", { noremap = true })
+keymap("n", "sv", ":<C-u>vsplit<CR>", { noremap = true })
+keymap("n", "st", ":<C-u>tabnew<CR>", { noremap = true })
+
 vim.cmd([[
   " -- map系 --
   " <Del> key: ノーマルモードで数値 (count) を入力しているときは、数字の最後の桁を削除します。
@@ -99,17 +103,12 @@ vim.cmd([[
   nnoremap <Leader><Leader>s :vs<CR><C-w>l:vert term<CR>
   tnoremap <Esc><Esc><Esc> <C-\><C-n>:q!<CR>
   command! Lazygit tabnew term://lazygit
-
   autocmd TermClose term://.//*:lazygit* bprevious | bwipeout!
 
   noremap gV `[v`]
   vnoremap <silent> y y`]
   vnoremap <silent> p p`]
   nnoremap <silent> p p`]
-
-  nnoremap ss :<C-u>split<CR>
-  nnoremap sv :<C-u>vsplit<CR>
-  nnoremap st :<C-u>tabnew<CR>
 
   nnoremap <C-s> :call Open_existed_vifm_buffer()<CR>
   nnoremap <C-p> :<C-u>FZF<CR>
