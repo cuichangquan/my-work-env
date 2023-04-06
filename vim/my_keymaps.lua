@@ -92,6 +92,14 @@ keymap("n", "ss", ":<C-u>split<CR>", { noremap = true })
 keymap("n", "sv", ":<C-u>vsplit<CR>", { noremap = true })
 keymap("n", "st", ":<C-u>tabnew<CR>", { noremap = true })
 
+keymap("n", "gV", "`[v`]", { noremap = true })
+keymap("v", "y", "y`]", { noremap = true, silent = true})
+keymap("v", "p", "p`]", { noremap = true, silent = true})
+keymap("n", "p", "p`]", { noremap = true, silent = true })
+
+keymap("n", "<C-s>", ":call Open_existed_vifm_buffer()<CR>", { noremap = true })
+keymap("n", "<C-p>", ":<C-u>FZF<CR>", { noremap = true })
+
 vim.cmd([[
   " -- map系 --
   " <Del> key: ノーマルモードで数値 (count) を入力しているときは、数字の最後の桁を削除します。
@@ -104,15 +112,6 @@ vim.cmd([[
   tnoremap <Esc><Esc><Esc> <C-\><C-n>:q!<CR>
   command! Lazygit tabnew term://lazygit
   autocmd TermClose term://.//*:lazygit* bprevious | bwipeout!
-
-  noremap gV `[v`]
-  vnoremap <silent> y y`]
-  vnoremap <silent> p p`]
-  nnoremap <silent> p p`]
-
-  nnoremap <C-s> :call Open_existed_vifm_buffer()<CR>
-  nnoremap <C-p> :<C-u>FZF<CR>
-  nnoremap <C-p> :<C-u>FZF<CR>
 
   " https://qiita.com/ymiyamae/items/cea5103c65184f55d62e
   "挿入モードのときに hl でカーソルを移動する
