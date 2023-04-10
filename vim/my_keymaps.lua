@@ -119,10 +119,6 @@ vim.cmd([[
   command! Lazygit tabnew term://lazygit
   autocmd TermClose term://.//*:lazygit* bprevious | bwipeout!
 
-  " コマンド履歴Windowはうるさいから、:qに置き換える
-  " map q: :q
-  " こうすることでマイクロを終了したい時にqの待ち時間が嫌だ
-
   " copy current file name to clipboard
   " http://stackoverflow.com/questions/916875/yank-file-name-path-of-current-buffer-in-vim
   " just filename
