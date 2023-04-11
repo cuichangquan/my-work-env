@@ -105,6 +105,13 @@ keymap("n", "<C-p>", ":<C-u>FZF<CR>", { noremap = true })
 keymap("i", "<C-h>", "<Left>", { noremap = true })
 keymap("i", "<C-l>", "<Right>", { noremap = true })
 
+-- " copy current file name to clipboard
+-- " http://stackoverflow.com/questions/916875/yank-file-name-path-of-current-buffer-in-vim
+keymap("n", "cn", ':let @+ = expand("%:t")<CR>', { noremap = true })                           -- " just filename
+keymap("n", "cp", ':let @+=expand("%")<CR>', { noremap = true })                               -- " 相対パス
+keymap("n", "cz", ':let @+ = expand("%:p")<CR>', { noremap = true })                           -- " full path
+keymap("n", "cf", ':let @+ = fnamemodify(expand("%:p"), ":t:r:r")<CR>', { noremap = true })    -- " 拡張無しのファイル名
+
 
 vim.cmd([[
   " -- map系 --
@@ -118,15 +125,4 @@ vim.cmd([[
   tnoremap <Esc><Esc><Esc> <C-\><C-n>:q!<CR>
   command! Lazygit tabnew term://lazygit
   autocmd TermClose term://.//*:lazygit* bprevious | bwipeout!
-
-  " copy current file name to clipboard
-  " http://stackoverflow.com/questions/916875/yank-file-name-path-of-current-buffer-in-vim
-  " just filename
-  nnoremap cn :let @+ = expand("%:t")<CR>
-  " 相対パス
-  nnoremap cp :let @+=expand("%")<CR>
-  " full path
-  nnoremap cz :let @+ = expand("%:p")<CR>
-  " 拡張無しのファイル名
-  nnoremap cf :let @+ = fnamemodify(expand("%:p"), ":t:r:r")<CR>
 ]])
