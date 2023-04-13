@@ -148,7 +148,9 @@ alias pc="p; cd app/controllers/"
 alias pv="p; cd app/views/"
 alias be="bundle exec"
 alias rails-s="bundle exec rails s -b 0.0.0.0"
+alias rails-c="BUNDLE_GEMFILE='Gemfile.local' bundle exec rails c"
 alias rails-s-production="bundle exec rails s -b 0.0.0.0 -e production"
+
 
 # ctags
 # ctags --langmap=RUBY:.rb --exclude=“＊.js”  --exclude=“.git＊” -R .

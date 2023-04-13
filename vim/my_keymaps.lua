@@ -121,8 +121,9 @@ vim.cmd([[
   " Make Terminal default mode insert
   " https://github.com/neovim/neovim/issues/8816
   autocmd TermOpen term://* startinsert
-  nnoremap <Leader><Leader>s :vs<CR><C-w>l:vert term<CR>
   tnoremap <Esc><Esc><Esc> <C-\><C-n>:q!<CR>
   command! Lazygit tabnew term://lazygit
   autocmd TermClose term://.//*:lazygit* bprevious | bwipeout!
 ]])
+
+keymap("n", "<Leader><Leader>s", ":vs<CR><C-w>l:vert term<CR>", { noremap = true })
