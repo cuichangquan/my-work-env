@@ -118,12 +118,13 @@ vim.cmd([[
   " <Del> key: ノーマルモードで数値 (count) を入力しているときは、数字の最後の桁を削除します。
   map CTRL-V <BS>   CTRL-V <Del>
 
-  " Make Terminal default mode insert
-  " https://github.com/neovim/neovim/issues/8816
-  autocmd TermOpen term://* startinsert
-  autocmd TermClose term://.//*:lazygit* bprevious | bwipeout!
   command! Lazygit tabnew term://lazygit
 ]])
+
+-- " Make Terminal default mode insert
+-- " https://github.com/neovim/neovim/issues/8816
+vim.api.nvim_create_autocmd("TermOpen", { pattern = { "term://*" }, command = "startinsert", })
+vim.api.nvim_create_autocmd("TermClose", { pattern = { "term://.//*:lazygit*" }, command = "bprevious | bwipeout!", })
 
 keymap("t", "<Esc><Esc><Esc>", "<C-\\><C-n>:q!<CR>", { noremap = true })
 keymap("n", "<Leader><Leader>s", ":vs<CR><C-w>l:vert term<CR>", { noremap = true })
