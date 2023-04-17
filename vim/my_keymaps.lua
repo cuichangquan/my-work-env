@@ -121,6 +121,9 @@ vim.cmd([[
   command! Lazygit tabnew term://lazygit
 ]])
 
+-- TODO:  エラー
+-- vim.api.nvim_create_user_command( 'Lazygit', tabnew term://lazygit, {} )
+
 -- " Make Terminal default mode insert
 -- " https://github.com/neovim/neovim/issues/8816
 vim.api.nvim_create_autocmd("TermOpen", { pattern = { "term://*" }, command = "startinsert", })
