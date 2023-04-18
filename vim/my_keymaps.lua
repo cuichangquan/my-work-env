@@ -117,12 +117,9 @@ vim.cmd([[
   " -- map系 --
   " <Del> key: ノーマルモードで数値 (count) を入力しているときは、数字の最後の桁を削除します。
   map CTRL-V <BS>   CTRL-V <Del>
-
-  command! Lazygit tabnew term://lazygit
 ]])
 
--- TODO:  エラー
--- vim.api.nvim_create_user_command( 'Lazygit', tabnew term://lazygit, {} )
+vim.api.nvim_create_user_command( 'Lazygit', 'tabnew term://lazygit', {} )
 
 -- " Make Terminal default mode insert
 -- " https://github.com/neovim/neovim/issues/8816
