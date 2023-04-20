@@ -112,12 +112,7 @@ keymap("n", "cp", ':let @+=expand("%")<CR>', { noremap = true })                
 keymap("n", "cz", ':let @+ = expand("%:p")<CR>', { noremap = true })                           -- " full path
 keymap("n", "cf", ':let @+ = fnamemodify(expand("%:p"), ":t:r:r")<CR>', { noremap = true })    -- " 拡張無しのファイル名
 
-
-vim.cmd([[
-  " -- map系 --
-  " <Del> key: ノーマルモードで数値 (count) を入力しているときは、数字の最後の桁を削除します。
-  map CTRL-V <BS>   CTRL-V <Del>
-]])
+keymap("n", "<C-V><BS>", "<C-V><Del>", {silent = true})
 
 vim.api.nvim_create_user_command( 'Lazygit', 'tabnew term://lazygit', {} )
 
