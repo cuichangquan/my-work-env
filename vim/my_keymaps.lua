@@ -25,9 +25,7 @@ keymap("v", "al", "$", { noremap = true })
 keymap("n", "gV", "`[v`]", { noremap = true })
 keymap("n", "<Leader>f", "g*N", { noremap = true })
 
--- " TODO
--- keymap("n", "<Leader>j", "'"", { noremap = true })
-vim.cmd([[nnoremap <Leader>j, '"]])
+keymap("n", "<Leader>j", '\'"', { noremap = true })
 keymap("n", "<Leader>F", "*N", { noremap = true })
 keymap("n", "<Leader>[", "'[", { noremap = true })
 keymap("n", "<Leader>]", "']", { noremap = true })
