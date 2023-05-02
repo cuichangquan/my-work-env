@@ -4,7 +4,10 @@ vim.cmd([[
   filetype on            " ファイル形式の検出を有効化
   filetype indent on    " Enable filetype-specific indenting
   filetype plugin on    " Enable filetype-specific plugins
+]])
 
+-- TODO:  auocmd
+vim.cmd([[
   " https://stackoverflow.com/questions/49165624/netrw-modifying-directories-always-complains
   autocmd FileType netrw setlocal bufhidden=delete
 
