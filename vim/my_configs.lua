@@ -6,13 +6,18 @@ vim.cmd([[
   filetype plugin on    " Enable filetype-specific plugins
 ]])
 
--- TODO:  auocmd
+local augroup = vim.api.nvim_create_augroup -- Create/get autocommand group
+local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
+
+-- "保存時に行末の空白を自動で削除(2016-10-21)
+autocmd("BufWritePre", {
+	pattern = "*",
+	command = ":%s/\\s\\+$//ge",
+})
+
 vim.cmd([[
   " https://stackoverflow.com/questions/49165624/netrw-modifying-directories-always-complains
   autocmd FileType netrw setlocal bufhidden=delete
-
-  "保存時に行末の空白を自動で削除(2016-10-21)
-  autocmd BufWritePre * :%s/\s\+$//ge
 
   " https://qiita.com/1000k/items/6d4953d2dd52fdd86556
   " ANSI color codes を除去する
