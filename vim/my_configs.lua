@@ -15,10 +15,13 @@ autocmd("BufWritePre", {
 	command = ":%s/\\s\\+$//ge",
 })
 
-vim.cmd([[
-  " https://stackoverflow.com/questions/49165624/netrw-modifying-directories-always-complains
-  autocmd FileType netrw setlocal bufhidden=delete
+-- " https://stackoverflow.com/questions/49165624/netrw-modifying-directories-always-complains
+autocmd("FileType", {
+	pattern = "netrw",
+	command = "setlocal bufhidden=delete",
+})
 
+vim.cmd([[
   " https://qiita.com/1000k/items/6d4953d2dd52fdd86556
   " ANSI color codes を除去する
   command! DeleteAnsi %s/\[[0-9;]*m//g
