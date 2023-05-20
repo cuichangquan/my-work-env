@@ -9,23 +9,28 @@ vim.cmd([[
 local augroup = vim.api.nvim_create_augroup -- Create/get autocommand group
 local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 
--- "保存時に行末の空白を自動で削除(2016-10-21)
+-- 保存時に行末の空白を自動で削除(2016-10-21)
 autocmd("BufWritePre", {
 	pattern = "*",
 	command = ":%s/\\s\\+$//ge",
 })
 
--- " https://stackoverflow.com/questions/49165624/netrw-modifying-directories-always-complains
+-- https://stackoverflow.com/questions/49165624/netrw-modifying-directories-always-complains
 autocmd("FileType", {
 	pattern = "netrw",
 	command = "setlocal bufhidden=delete",
 })
 
-vim.cmd([[
-  " https://qiita.com/1000k/items/6d4953d2dd52fdd86556
-  " ANSI color codes を除去する
-  command! DeleteAnsi %s/\[[0-9;]*m//g
+-- https://qiita.com/1000k/items/6d4953d2dd52fdd86556
+-- ANSI color codes を除去する
+vim.cmd([[command! DeleteAnsi %s/\[[0-9;]*m//g ]])
 
+-- TODO:
+-- vim.api.nvim_create_user_command("DeleteAnsi", function()
+--   vim.cmd("%s/\[[0-9;]*m//g")
+-- end, {})
+
+vim.cmd([[
   " ? or / 検索したキーワード数をカウントする。
   " http://advweb.seesaa.net/article/13053855.html   # 「|」で区切って、複数のコマンドを連続一度実行
   " http://d.hatena.ne.jp/hide04/20111223/1324621495 # vimコマンド出力をクリップボードへコピー
