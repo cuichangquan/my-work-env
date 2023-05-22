@@ -23,19 +23,14 @@ autocmd("FileType", {
 
 -- https://qiita.com/1000k/items/6d4953d2dd52fdd86556
 -- ANSI color codes を除去する
-vim.cmd([[command! DeleteAnsi %s/\[[0-9;]*m//g ]])
+vim.cmd([[command! DeleteAnsi %s/<1b>\[[0-9;]*m//g$]])
 
--- TODO:
--- vim.api.nvim_create_user_command("DeleteAnsi", function()
---   vim.cmd("%s/\[[0-9;]*m//g")
--- end, {})
+-- " ? or / 検索したキーワード数をカウントする。
+-- " http://advweb.seesaa.net/article/13053855.html   # 「|」で区切って、複数のコマンドを連続一度実行
+-- " http://d.hatena.ne.jp/hide04/20111223/1324621495 # vimコマンド出力をクリップボードへコピー
+vim.cmd([[command! Count :redir @*> | :%s//&/gn | :redir END]])
 
 vim.cmd([[
-  " ? or / 検索したキーワード数をカウントする。
-  " http://advweb.seesaa.net/article/13053855.html   # 「|」で区切って、複数のコマンドを連続一度実行
-  " http://d.hatena.ne.jp/hide04/20111223/1324621495 # vimコマンド出力をクリップボードへコピー
-  command! Count :redir @*> | :%s//&/gn | :redir END
-
   " 最後に保存してから、どのくらい編集したのかの差分を表示
   " gitが感知できないバファの変更を表示してくれる
   " https://nanasi.jp/articles/howto/diff/diff-original-file.html
