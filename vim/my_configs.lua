@@ -36,31 +36,9 @@ vim.cmd([[
   " https://nanasi.jp/articles/howto/diff/diff-original-file.html
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis | wincmd p | diffthis
 
-  "Delete all Git conflict markers
-  "https://vi.stackexchange.com/questions/10534/is-there-a-way-to-take-both-when-using-vim-as-merge-tool
-  function! RemoveConflictMarkers() range
-    " echom a:firstline.'-'.a:lastline
-    silent execute a:firstline.','.a:lastline . ' g/^<\{7}\|^|\{7}\|^=\{7}\|^>\{7}/d'
-  endfunction
-  "-range=% default is whole file
-  command! -range=% GremoveConflictMarkers <line1>,<line2>call RemoveConflictMarkers()
-
   source ~/sai/my-work-env/vim/jira_prject.vim
   source ~/sai/my-work-env/vim/ccq.vim
   source ~/sai/work-config/work-config.vim
-
-  " TODO:なんか効いていない。
-  " https://postd.cc/how-to-boost-your-vim-productivity/
-  " vp doesn't replace paste buffer
-  " function! RestoreRegister()
-  "   let @" = s:restore_reg
-  "   return ''
-  " endfunction
-  " function! s:Repl()
-  "   let s:restore_reg = @"
-  "   return "p@=RestoreRegister()\<cr>"
-  " endfunction
-  " vmap <silent> <expr> p <sid>Repl()
 
   " https://qiita.com/wadako111/items/755e753677dd72d8036d
   " The prefix key.
@@ -108,22 +86,6 @@ vim.cmd([[
   nnoremap <C-]> g<C-]>
 
 ]])
-
--- " https://superuser.com/questions/214696/how-can-i-discard-my-undo-history-in-vim
--- " A function to clear the undo history
--- function! <SID>ForgetUndo(isBang)
---     let old_undolevels = &undolevels
---     set undolevels=-1
---     if a:isBang ==# ''
---       edit!
---     else
---       exe "normal a \<BS>\<Esc>"
---     endif
---     let &undolevels = old_undolevels
---     unlet old_undolevels
--- endfunction
--- command! -bang -nargs=0 UndoClear call <SID>ForgetUndo('<bang>')
--- command! -bang -nargs=0 ClearUndo call <SID>ForgetUndo('<bang>')
 
 vim.cmd([[
 " https://github.com/mhinz/neovim-remote
