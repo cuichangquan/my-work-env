@@ -280,3 +280,6 @@ check-vifm(){
   fi
 }
 
+# AWS CLI 補完設定
+autoload bashcompinit && bashcompinit
+complete -C '/usr/local/bin/aws_completer' aws
