@@ -82,7 +82,6 @@ nnoremap ,,  A,<ESC>
 " これも生産性を生む
 " gn gN: select text highlighted by search
 
-nnoremap <Leader>g :tabnew<CR>:Lazygit<CR>
 nnoremap <Leader>h :call Open_existed_vifm_buffer()<CR>
 nnoremap <Leader>d :call Toggle_current_directory()<CR>
 
@@ -104,22 +103,10 @@ nnoremap <Leader>d :call Toggle_current_directory()<CR>
 " https://yuheikagaya.hatenablog.jp/entry/2012/12/03/202556
 nnoremap gs :vertical wincmd f<CR>
 
-if has('nvim')
-  set clipboard=unnamedplus
-  " Make Terminal default mode insert
-  " https://github.com/neovim/neovim/issues/8816
-  autocmd TermOpen term://* startinsert
-  nnoremap <Leader><Leader>s :vs<CR><C-w>l:vert term<CR>
-  tnoremap <Esc><Esc><Esc> <C-\><C-n>:q!<CR>
-  command! Lazygit tabnew term://lazygit
-
-  autocmd TermClose term://.//*:lazygit* bprevious | bwipeout!
-else
-  set clipboard=unnamed
-  tnoremap <Esc><Esc><Esc> <C-W><C-C>
-  nnoremap <Leader><Leader>s :vert term<CR>
-  command! Lazygit :tab term ++close lazygit
-endif
+set clipboard=unnamed
+tnoremap <Esc><Esc><Esc> <C-W><C-C>
+nnoremap <Leader><Leader>s :vert term<CR>
+command! Lazygit :tab term ++close lazygit
 
 " http://cohama.hateblo.jp/entry/20130108/1357664352
 vnoremap P "0p
