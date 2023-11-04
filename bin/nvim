@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# やりたいことは、
+# lazygitではnvrを認識されないようなので、vimか nvimしか認識していない。
+# そのため、nvimを起動するときは、nvrを使うようにする。
+# さらに、このスクリプトを使うことで、nvimを起動できるようにする。
+# しかしうまくいかない。
+
+# 参考資料
+# https://github.com/kdheepak/lazygit.nvim
+# https://github.com/mhinz/neovim-remote
+
+# 全ての引数を渡す( "$@" )
+if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
+    nvr -cc split --remote-wait +'set bufhidden=wipe' "$@"
+else
+  export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
+  /usr/local/bin/nvim --listen "$NVIM_LISTEN_ADDRESS" "$@"
+fi

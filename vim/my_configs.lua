@@ -90,7 +90,7 @@ vim.cmd([[
 vim.cmd([[
 " https://github.com/mhinz/neovim-remote
 " このように設定することで、lazygitがneovimで「e」キーで対象ファイルを開けた。
-let $VISUAL = 'nvr'
+" let $VISUAL = 'nvr'
 " 「e」で対象ファイル開けなかった。そもそも引数があると、だめぽい。
 " let $VISUAL = 'nvr -cc split --remote-wait'
 ]])
