@@ -57,9 +57,8 @@ fileviewer *.rb,*.erb,*.md,*.yml,*.js,*.css,*.py,*.sh,*.json
 
 " fdを使ってファイルの検索する
 " https://wonderwall.hatenablog.com/entry/2019/03/06/224000
-" command! fd !file=$(fd --type file --color=always --hidden --follow --exclude .git %a  %d | fzf --ansi);
-"             \ if [ -n "$file" ]; then vim $file; fi
-" nnoremap <SPACE>f :fd<SPACE>
+command! fd !file=$(fd --type file --color=always --hidden --follow --exclude .git %a  %d | fzf --ansi);
+            \ if [ -n "$file" ]; then vim $file; fi
 
 " https://wiki.vifm.info/index.php/How_to_integrate_fzf_for_fuzzy_finding
 command! FZF :set noquickview | :execute 'goto' fnameescape(term('fd --type file --color=always --hidden --follow --exclude .git | fzf --ansi 2>/dev/tty'))
@@ -105,6 +104,7 @@ command! reload :write | restart
 command! OpenSession !NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim -c 'OpenSession'
 command! DeniteFileMru !NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim -c 'Denite file_mru'
 
+nnoremap ff :fd<SPACE>
 nnoremap <SPACE>f :FZF<CR>
 nnoremap <c-g> :Ag<SPACE>
 nnoremap ag :ag<SPACE>
