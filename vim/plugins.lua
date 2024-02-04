@@ -73,5 +73,5 @@ return require('packer').startup(function(use)
     requires = 'webapi-vim',
     cmd = { 'RedashDescribe', 'RedashExecute', 'RedashPost', 'RedashSetDataSource', 'RedashShowDataSources', 'RedashShowTables' }
   }
-
+  use {'maxmellon/vim-jsx-pretty'}
 end)
