@@ -125,6 +125,10 @@ inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
 "-- start ---'github/copilot.vim'---
 " Tabは他のpluginによって使われていたためC-Jに変更した
 imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+imap <C-k>   <Plug>(copilot-accept-word)
+imap <C-l>   <Plug>(copilot-accept-line)
+" imap <C-a><C-k>   <Plug>(copilot-accept-word)
+" imap <C-a><C-l>   <Plug>(copilot-accept-line)
 imap <C-a><C-s>   <Plug>(copilot-suggest)
 imap <C-a><C-p>   <Plug>(copilot-previous)
 imap <C-a><C-n>   <Plug>(copilot-next)
