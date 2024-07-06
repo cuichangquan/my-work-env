@@ -163,7 +163,7 @@ alias rails-s-production="bundle exec rails s -b 0.0.0.0 -e production"
 alias ctags="`brew --prefix`/bin/ctags"
 
 alias dc="docker"
-alias dcc="d;docker-compose"
+alias dcc="docker-compose"
 alias jira="jira-cli"
 
 # 一括置換

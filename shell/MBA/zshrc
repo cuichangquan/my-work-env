@@ -1,0 +1,53 @@
+# ~/.zprofile
+# ~/.zshrc
+
+# About work
+if [ -f ~/.public_alias ]; then
+  . ~/.public_alias
+fi
+
+if [ -f ~/.private_alias ]; then
+  . ~/.private_alias
+fi
+
+if [ -f ~/.private_alias_my_pj ]; then
+  . ~/.private_alias_my_pj
+fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/z/z.sh ] && source ~/z/z.sh
+
+alias zshrc='vim ~/.zshrc'
+alias sss='source ~/.zshrc'
+
+# Useing direnv
+eval "$(direnv hook zsh)"
+
+eval "$(rbenv init - zsh)"
+
+# Node.js install
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
+
+# If you need to have libpq first in your PATH, run:
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# For compilers to find libpq you may need to set:
+export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib -L/opt/homebrew/opt/readline/lib -L/opt/homebrew/opt/libyaml/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/libyaml/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl@3/lib/pkgconfig:/opt/homebrew/opt/readline/lib/pkgconfig:/opt/homebrew/opt/libyaml/lib/pkgconfig"
+
+# CSVフォーマットを検証するためのツールである
+export PATH=$PATH:$HOME/bin/csvlint
+
+# Rustコンパイラをインストールするため
+# from: https://www.rust-lang.org/tools/install
+# https://github.com/lm-sys/FastChatをインストールには以下のコンパイラが必要ぽい
+# rustc --version の install
+# https://www.rust-lang.org/tools/install
+source "$HOME/.cargo/env"
+
+# nodejsをinstall するため
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
