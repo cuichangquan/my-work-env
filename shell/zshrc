@@ -20,34 +20,34 @@ fi
 alias zshrc='vim ~/.zshrc'
 alias sss='source ~/.zshrc'
 
-# ruby 3.2
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-
 # Useing direnv
 eval "$(direnv hook zsh)"
-# Useing anyenv
-eval "$(anyenv init -)"
+
+eval "$(rbenv init - zsh)"
 
 # Node.js install
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 
-# ==> libpq
-# libpq is keg-only, which means it was not symlinked into /usr/local,
-# because conflicts with postgres formula.
-
 # If you need to have libpq first in your PATH, run:
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 
 # For compilers to find libpq you may need to set:
-export LDFLAGS="-L/usr/local/opt/libpq/lib"
-export CPPFLAGS="-I/usr/local/opt/libpq/include"
-
-# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib -L/opt/homebrew/opt/readline/lib -L/opt/homebrew/opt/libyaml/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/libyaml/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl@3/lib/pkgconfig:/opt/homebrew/opt/readline/lib/pkgconfig:/opt/homebrew/opt/libyaml/lib/pkgconfig"
 
 # CSVフォーマットを検証するためのツールである
 export PATH=$PATH:$HOME/bin/csvlint
 
 # Rustコンパイラをインストールするため
 # from: https://www.rust-lang.org/tools/install
+# https://github.com/lm-sys/FastChatをインストールには以下のコンパイラが必要ぽい
+# rustc --version の install
+# https://www.rust-lang.org/tools/install
 source "$HOME/.cargo/env"
+
+# nodejsをinstall するため
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

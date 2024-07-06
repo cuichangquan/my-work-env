@@ -48,3 +48,6 @@ touch  ~/.Xauthority
 # bash系は使わないようにする
 # ln -fs ~/sai/my-work-env/shell/bashrc            ~/.bashrc
 # ln -fs ~/sai/my-work-env/git/git-completion.bash ~/.git-completion.bash
+
+# diff-highlight(git diff用)ファイルをパス認識できる場所にリンクして置く
+sudo ln -fs $(brew --prefix git)/share/git-core/contrib/diff-highlight/diff-highlight /usr/local/bin/diff-highlight
