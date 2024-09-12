@@ -35,7 +35,7 @@ return require('packer').startup(function(use)
   end}
   -- TODO: うまく動かない
   -- call dein#local('~/sai/local-plugins', { 'frozen' : 1 }, ['denite_sources'])
-  use { '~/sai/local-plugins', module = 'denite_sources' }
+  -- use { '~/sai/local-plugins', module = 'denite_sources' }
 
   -- use 'github/copilot.vim'
     -- 直接インストールした
@@ -73,5 +73,6 @@ return require('packer').startup(function(use)
     requires = 'webapi-vim',
     cmd = { 'RedashDescribe', 'RedashExecute', 'RedashPost', 'RedashSetDataSource', 'RedashShowDataSources', 'RedashShowTables' }
   }
+  use {'pangloss/vim-javascript', ft = {'javascript', 'javascript.jsx'}}
   use {'maxmellon/vim-jsx-pretty'}
 end)

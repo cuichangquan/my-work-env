@@ -202,4 +202,8 @@ vmap <C-v> <Plug>(expand_region_shrink)
 " If you want to start window resize mode by `Ctrl+T`
 let g:winresizer_start_key = '<C-T>'
 "-- end ---------------------------------
+
+"-- start ---'maxmellon/vim-jsx-pretty'--------------
+let g:vim_jsx_pretty_colorful_config = 1 " default 0
+"-- end ---------------------------------------------
 ]])
