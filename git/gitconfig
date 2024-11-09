@@ -37,9 +37,6 @@
   diff = diff-highlight | less
 [push]
   default = current
-[user]
-  name = changquan.cui
-  email = ccq1170@gmail.com
 [commit]
   template = ~/.stCommitMsg
 [pull]
