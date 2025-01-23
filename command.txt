@@ -1,53 +1,105 @@
-ln -fs ~/sai/my-work-env/shell/MBA/zshrc       ~/.zshrc
-ln -fs ~/sai/my-work-env/shell/public_alias    ~/.public_alias
-ln -fs ~/sai/work-config/private_alias         ~/.private_alias
-ln -fs ~/sai/work-config/private_alias_my_pj   ~/.private_alias_my_pj
+#!/bin/bash
 
-# vim
-ln -fs ~/sai/my-work-env/vim/vimrc              ~/.vimrc
+# Zsh
+rm -f ~/.zshrc
+cp -f ~/sai/my-work-env/shell/MBA/zshrc ~/.zshrc
 
-# neovim
-ln -fs ~/sai/my-work-env/vim/init.lua           ~/.config/nvim/init.lua
+rm -f ~/.public_alias
+cp -f ~/sai/my-work-env/shell/public_alias ~/.public_alias
+
+rm -f ~/.private_alias
+cp -f ~/sai/work-config/private_alias ~/.private_alias
+
+rm -f ~/.private_alias_my_pj
+cp -f ~/sai/work-config/private_alias_my_pj ~/.private_alias_my_pj
+
+# Vim
+rm -f ~/.vimrc
+cp -f ~/sai/my-work-env/vim/vimrc ~/.vimrc
+
+# Neovim
 mkdir -p ~/.config/nvim/lua
-ln -fs ~/sai/my-work-env/vim/my_options.lua     ~/.config/nvim/lua/my_options.lua
-ln -fs ~/sai/my-work-env/vim/my_keymaps.lua     ~/.config/nvim/lua/my_keymaps.lua
-ln -fs ~/sai/my-work-env/vim/my_configs.lua     ~/.config/nvim/lua/my_configs.lua
-ln -fs ~/sai/my-work-env/vim/plugins.lua        ~/.config/nvim/lua/plugins.lua
-ln -fs ~/sai/my-work-env/vim/plugin_configs.lua ~/.config/nvim/lua/plugin_configs.lua
+rm -f ~/.config/nvim/init.lua
+cp -f ~/sai/my-work-env/vim/init.lua ~/.config/nvim/init.lua
 
-ln -fs ~/sai/my-work-env/tmux/tmux.conf       ~/.tmux.conf
-ln -fs ~/sai/my-work-env/tmux/tmux.conf.osx   ~/.tmux.conf.osx
+rm -f ~/.config/nvim/lua/my_options.lua
+cp -f ~/sai/my-work-env/vim/my_options.lua ~/.config/nvim/lua/my_options.lua
 
-ln -fs ~/sai/my-work-env/git/gitconfig           ~/.gitconfig
-ln -fs ~/sai/my-work-env/git/gitignore           ~/.gitignore
-ln -fs ~/sai/my-work-env/git/git-prompt.sh       ~/.zsh/git-prompt.sh
-ln -fs ~/sai/my-work-env/git/git-completion.bash ~/.zsh/git-completion.bash
-ln -fs ~/sai/my-work-env/git/git-completion.zsh  ~/.zsh/_git
-ln -fs ~/sai/my-work-env/git/tigrc               ~/.tigrc
+rm -f ~/.config/nvim/lua/my_keymaps.lua
+cp -f ~/sai/my-work-env/vim/my_keymaps.lua ~/.config/nvim/lua/my_keymaps.lua
 
-ln -fs ~/sai/my-work-env/others/pryrc       ~/.pryrc
-ln -fs ~/sai/my-work-env/others/agignore    ~/.agignore
-ln -fs ~/sai/my-work-env/others/vifmrc      ~/.vifm/vifmrc
-ln -fs ~/sai/my-work-env/others/ctags       ~/.ctags
-ln -fs ~/sai/my-work-env/others/inputrc     ~/.inputrc
+rm -f ~/.config/nvim/lua/my_configs.lua
+cp -f ~/sai/my-work-env/vim/my_configs.lua ~/.config/nvim/lua/my_configs.lua
 
-ln -fs ~/sai/my-work-env/peco/config.json          ~/.config/peco/config.json
+rm -f ~/.config/nvim/lua/plugins.lua
+cp -f ~/sai/my-work-env/vim/plugins.lua ~/.config/nvim/lua/plugins.lua
 
-# ln -fs ~/sai/my-work-env/us_keyboard/karabiner/equal_sign_to_plus_sign.json       ~/.config/karabiner/assets/complex_modifications/equal_sign_to_plus_sign.json
-# ln -fs ~/sai/my-work-env/us_keyboard/karabiner/quote_to_colon.json                ~/.config/karabiner/assets/complex_modifications/quote_to_colon.json
-ln -fs ~/sai/my-work-env/us_keyboard/karabiner/mechanical_keyboard.json             ~/.config/karabiner/assets/complex_modifications/mechanical_keyboard.json
-ln -fs ~/sai/my-work-env/us_keyboard/karabiner/sai.json                             ~/.config/karabiner/assets/complex_modifications/sai.json
-ln -fs ~/sai/my-work-env/us_keyboard/karabiner/exchange_slash_to_question_mark.json ~/.config/karabiner/assets/complex_modifications/exchange_slash_to_question_mark.json
+rm -f ~/.config/nvim/lua/plugin_configs.lua
+cp -f ~/sai/my-work-env/vim/plugin_configs.lua ~/.config/nvim/lua/plugin_configs.lua
 
-# これはただ作成しておくだけでいい。
-touch  ~/.Xauthority
+# Tmux
+rm -f ~/.tmux.conf
+cp -f ~/sai/my-work-env/tmux/tmux.conf ~/.tmux.conf
 
-# 上書きしたいであれば、-f というoptionを追加する
+rm -f ~/.tmux.conf.osx
+cp -f ~/sai/my-work-env/tmux/tmux.conf.osx ~/.tmux.conf.osx
 
+# Git
+rm -f ~/.gitconfig
+cp -f ~/sai/my-work-env/git/gitconfig ~/.gitconfig
 
-# bash系は使わないようにする
-# ln -fs ~/sai/my-work-env/shell/bashrc            ~/.bashrc
-# ln -fs ~/sai/my-work-env/git/git-completion.bash ~/.git-completion.bash
+rm -f ~/.gitignore
+cp -f ~/sai/my-work-env/git/gitignore ~/.gitignore
 
-# diff-highlight(git diff用)ファイルをパス認識できる場所にリンクして置く
+mkdir -p ~/.zsh
+rm -f ~/.zsh/git-prompt.sh
+cp -f ~/sai/my-work-env/git/git-prompt.sh ~/.zsh/git-prompt.sh
+
+rm -f ~/.zsh/git-completion.bash
+cp -f ~/sai/my-work-env/git/git-completion.bash ~/.zsh/git-completion.bash
+
+rm -f ~/.zsh/_git
+cp -f ~/sai/my-work-env/git/git-completion.zsh ~/.zsh/_git
+
+rm -f ~/.tigrc
+cp -f ~/sai/my-work-env/git/tigrc ~/.tigrc
+
+# Others
+rm -f ~/.pryrc
+cp -f ~/sai/my-work-env/others/pryrc ~/.pryrc
+
+rm -f ~/.agignore
+cp -f ~/sai/my-work-env/others/agignore ~/.agignore
+
+mkdir -p ~/.vifm
+rm -f ~/.vifm/vifmrc
+cp -f ~/sai/my-work-env/others/vifmrc ~/.vifm/vifmrc
+
+rm -f ~/.ctags
+cp -f ~/sai/my-work-env/others/ctags ~/.ctags
+
+rm -f ~/.inputrc
+cp -f ~/sai/my-work-env/others/inputrc ~/.inputrc
+
+# Peco
+mkdir -p ~/.config/peco
+rm -f ~/.config/peco/config.json
+cp -f ~/sai/my-work-env/peco/config.json ~/.config/peco/config.json
+
+# Karabiner
+mkdir -p ~/.config/karabiner/assets/complex_modifications
+rm -f ~/.config/karabiner/assets/complex_modifications/mechanical_keyboard.json
+cp -f ~/sai/my-work-env/us_keyboard/karabiner/mechanical_keyboard.json ~/.config/karabiner/assets/complex_modifications/mechanical_keyboard.json
+
+rm -f ~/.config/karabiner/assets/complex_modifications/sai.json
+cp -f ~/sai/my-work-env/us_keyboard/karabiner/sai.json ~/.config/karabiner/assets/complex_modifications/sai.json
+
+rm -f ~/.config/karabiner/assets/complex_modifications/exchange_slash_to_question_mark.json
+cp -f ~/sai/my-work-env/us_keyboard/karabiner/exchange_slash_to_question_mark.json ~/.config/karabiner/assets/complex_modifications/exchange_slash_to_question_mark.json
+
+# Touch Xauthority
+touch ~/.Xauthority
+
+# diff-highlight
 sudo ln -fs $(brew --prefix git)/share/git-core/contrib/diff-highlight/diff-highlight /usr/local/bin/diff-highlight
+
