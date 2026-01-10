@@ -11,3 +11,8 @@ Gemfileにないgemを使いたい
 - https://qiita.com/vzvu3k6k/items/12aff810ea93c7c6f307
 - export BUNDLE_GEMFILE="Gemfile.local"
 - bundle install
+
+fastmod
+- 巨大リポジトリ向けの、確認しながら一括リネームできる置換ツール
+- 例: fastmod 'FROM' 'TO'
+
