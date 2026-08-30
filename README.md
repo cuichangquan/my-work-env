@@ -16,3 +16,5 @@ fastmod
 - 巨大リポジトリ向けの、確認しながら一括リネームできる置換ツール
 - 例: fastmod 'FROM' 'TO'
 
+gh-stack
+- https://github.com/github/gh-stack
