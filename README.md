@@ -21,6 +21,10 @@ gh-stack
 
 # AI 
 
+## My CLAUDE.md
+
+- [CLAUDE.md](CLAUDE.md)
+
 ## 「AIの答えを評価する力」をUPしたいのであれば
 
 特におすすめなのは、毎日AIに何か聞いたあと、最後に必ずこれを聞く習慣です。
