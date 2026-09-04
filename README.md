@@ -24,6 +24,7 @@ gh-stack
 ## My CLAUDE.md
 
 - [CLAUDE.md](CLAUDE.md)
+- [tech_doc_summary_prompt.md](tech_doc_summary_prompt.md)
 
 ## 「AIの答えを評価する力」をUPしたいのであれば
 
