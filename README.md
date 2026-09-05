@@ -24,7 +24,7 @@ gh-stack
 ## My プロンプト
 
 - [CLAUDE.md](CLAUDE.md)
-- [tech_doc_summary_prompt.md](tech_doc_summary_prompt.md)
+- [TECH_DOC_SUMMARY_PROMPT.md](TECH_DOC_SUMMARY_PROMPT.md)
 
 <br/><br/>
 
